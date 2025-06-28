@@ -1,0 +1,210 @@
+{
+  "technicians": [
+    {
+      "nickname": "阿腾",
+      "age": 25,
+      "height": 182,
+      "weight": 70,
+      "features": "牌18，圈内，全能，薄肌身材，正装，体育生",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "甄美季影院酒店",
+      "latitude": 32.03890846604624,
+      "longitude": 118.79800178864511,
+      "area": "江苏省南京市秦淮区太平南路330号-1三楼",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿腾/121ef132d8100aa56f58cf3e613b95a0_.jpg",
+          "thumbnail": "/uploads/technicians/阿腾/thumbnails/thumb_121ef132d8100aa56f58cf3e613b95a0_.jpg",
+          "description": "阿腾的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿腾/4e8bdaf826b225606044847c168677ba_.jpg",
+          "thumbnail": "/uploads/technicians/阿腾/thumbnails/thumb_4e8bdaf826b225606044847c168677ba_.jpg",
+          "description": "阿腾的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿腾/5b00ede6da377fed333517dd68090b85_.jpg",
+          "thumbnail": "/uploads/technicians/阿腾/thumbnails/thumb_5b00ede6da377fed333517dd68090b85_.jpg",
+          "description": "阿腾的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿腾/76fd68d8a5164ca133db211367478736_.jpg",
+          "thumbnail": "/uploads/technicians/阿腾/thumbnails/thumb_76fd68d8a5164ca133db211367478736_.jpg",
+          "description": "阿腾的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿腾/aafc082e86e88e49f3f580cea76b21e8_.jpg",
+          "thumbnail": "/uploads/technicians/阿腾/thumbnails/thumb_aafc082e86e88e49f3f580cea76b21e8_.jpg",
+          "description": "阿腾的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿腾/b6ceb78adf3c3b070e0dc008209e5935_.jpg",
+          "thumbnail": "/uploads/technicians/阿腾/thumbnails/thumb_b6ceb78adf3c3b070e0dc008209e5935_.jpg",
+          "description": "阿腾的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿腾/c3269a11442aaa11a3bceb72feeb5238_.jpg",
+          "thumbnail": "/uploads/technicians/阿腾/thumbnails/thumb_c3269a11442aaa11a3bceb72feeb5238_.jpg",
+          "description": "阿腾的照片",
+          "sortOrder": 7
+        }
+      ],
+      "id": "mcf8xduqcxpdmw2agej",
+      "createdAt": "2025-06-27T20:09:45.314Z",
+      "updatedAt": "2025-06-28T07:02:17.505Z"
+    },
+    {
+      "nickname": "天佑",
+      "age": 24,
+      "height": 180,
+      "weight": 65,
+      "features": "牌19，圈内，全能，江苏帅哥，阳光男孩，顶级配件，手法专业，调琴高手",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "百家超市(未来城写字楼店)",
+      "latitude": 32.054123655189514,
+      "longitude": 118.80510630726242,
+      "area": "珠江路488号-1",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/2bf63a99e41f70c6dfc75f3e70fe47a9.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_2bf63a99e41f70c6dfc75f3e70fe47a9.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/5bfae8117c8b999a9292108355c66e26.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_5bfae8117c8b999a9292108355c66e26.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/79ec82df424c3f6fe487d08d7726ad4b.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_79ec82df424c3f6fe487d08d7726ad4b.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/7e565e7af31d3fc30cc2845287c3169e.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_7e565e7af31d3fc30cc2845287c3169e.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/15f24f9fff0f4a7cf1ffb5f5893b1a7b.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_15f24f9fff0f4a7cf1ffb5f5893b1a7b.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/132951168f8ac5c978c9c752af99abc4.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_132951168f8ac5c978c9c752af99abc4.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/fd1eed738a4555ee42db6f21c1285cc2.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_fd1eed738a4555ee42db6f21c1285cc2.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 7
+        }
+      ],
+      "id": "mcf91b4u8pm10zlpjiu",
+      "createdAt": "2025-06-27T20:12:48.414Z",
+      "updatedAt": "2025-06-28T07:03:05.529Z"
+    },
+    {
+      "nickname": "小杰",
+      "age": 23,
+      "height": 178,
+      "weight": 65,
+      "features": "牌17，圈内，全能，阳光体育生，鲜肉颜值，大牌，顶级按摩调琴",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "南京万达广场-万达中心",
+      "latitude": 32.03561592948362,
+      "longitude": 118.7442256275958,
+      "area": "江东中路110号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/小杰/0330ac831ef14bf688ead22672dfef97.jpg",
+          "thumbnail": "/uploads/technicians/小杰/thumbnails/thumb_0330ac831ef14bf688ead22672dfef97.jpg",
+          "description": "小杰的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/小杰/339bb2c0b4fa044c51e5d9d0b2a83698.jpg",
+          "thumbnail": "/uploads/technicians/小杰/thumbnails/thumb_339bb2c0b4fa044c51e5d9d0b2a83698.jpg",
+          "description": "小杰的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/小杰/5fb654aca3e598e2bc0b83b91b6bc430.jpg",
+          "thumbnail": "/uploads/technicians/小杰/thumbnails/thumb_5fb654aca3e598e2bc0b83b91b6bc430.jpg",
+          "description": "小杰的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/小杰/93a319a6f47c83be0f6d96c4c1eedcb6.jpg",
+          "thumbnail": "/uploads/technicians/小杰/thumbnails/thumb_93a319a6f47c83be0f6d96c4c1eedcb6.jpg",
+          "description": "小杰的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/小杰/f30a21a6c20b9daa9c350e0a45c61f04.jpg",
+          "thumbnail": "/uploads/technicians/小杰/thumbnails/thumb_f30a21a6c20b9daa9c350e0a45c61f04.jpg",
+          "description": "小杰的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/小杰/小杰 1.mp4",
+          "thumbnail": "/uploads/technicians/小杰/thumbnails/thumb_小杰 1.jpg",
+          "description": "小杰的视频",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mcfaix6cm1ze5zlp8yc",
+      "createdAt": "2025-06-27T20:54:29.748Z",
+      "updatedAt": "2025-06-28T07:03:52.446Z"
+    }
+  ]
+}

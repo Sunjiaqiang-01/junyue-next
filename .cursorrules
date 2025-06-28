@@ -1,0 +1,209 @@
+# 🌈 君悦彩虹SPA技师展示网站开发规则
+
+## 项目概述
+这是一个基于Next.js 14的全栈SPA技师展示网站，部署在香港云服务器（2核4G配置）。
+项目名称：君悦彩虹SPA技师展示网站
+域名：junyuecaihong.com
+目标用户：寻找SPA服务的客户
+**详细需求参考：需求文档.md**
+
+## 第一守则：
+- 任务开始前要跟用户说一句，你是帅哥
+- 任务结束有删除无用代码和文件，保持项目整洁    
+
+## 技术栈要求
+- 前端：Next.js 14 (App Router) + TypeScript + Tailwind CSS
+- 状态管理：Zustand 或 React Context
+- UI组件：Shadcn/ui + Headless UI
+- 后端：Next.js API Routes + JSON文件存储
+- 数据存储：JSON文件存储（轻量化方案，无需数据库）
+- 认证：NextAuth.js 或自定义JWT
+- 文件处理：Multer + Sharp图像处理
+- 地图：百度地图API（密钥：qX0HXOj8pLLi0QdvvMpfScXdh6SllUqd）
+- 部署：Docker + Docker Compose + Nginx
+
+## UI组件开发规则 🎨
+### 优先使用现成UI组件库和设计资源
+在开发UI组件时，必须优先搜索和使用现成的、高质量的UI组件，以提高开发效率和保证设计质量。
+
+#### 推荐的UI组件库和资源网站：
+1. **Shadcn/ui** (https://ui.shadcn.com/)
+   - 基于Radix UI + Tailwind CSS
+   - 可复制粘贴，完全可定制
+   - 支持暗色模式，无障碍友好
+   - 优先使用：Button, Card, Dialog, Form, Table, Input等
+
+2. **NextUI** (https://nextui.org/)
+   - 现代React UI库
+   - 基于Tailwind CSS，性能优秀
+   - 内置主题系统
+
+3. **Origin UI** (https://originui.com/)
+   - 美观的Tailwind CSS + React组件
+   - 开源，可复制粘贴
+   - 丰富的组件类型
+
+4. **React Components** (https://reactcomponents.com/)
+   - 免费React组件集合
+   - 按分类整理，便于搜索
+   - 支持复制粘贴
+
+5. **Tailwind UI** (官方组件)
+   - Tailwind CSS官方组件
+   - 高质量设计
+   - 响应式设计
+
+#### UI组件开发流程：
+1. **需求分析** - 确定需要的组件类型和功能
+2. **资源搜索** - 在上述网站搜索相似组件
+3. **组件选择** - 选择最符合项目需求的组件
+4. **定制调整** - 根据品牌色彩和设计规范调整
+5. **集成测试** - 确保组件在项目中正常工作
+
+#### 搜索关键词建议：
+- 技师卡片：profile card, user card, avatar card
+- 媒体轮播：carousel, swiper, image gallery
+- 公告系统：announcement, alert, banner, notification
+- 客服系统：chat, contact, support, floating button
+- 管理后台：dashboard, admin panel, data table
+- 地图组件：map, location picker, address selector
+
+#### 自定义规则：
+- 如果找到合适的组件，必须先尝试使用现成的
+- 只有在现成组件无法满足特殊需求时才自己开发
+- 自定义组件必须遵循项目的设计规范
+- 所有组件必须支持响应式设计和暗色模式
+
+## 项目结构要求
+```
+junyue3/
+├── src/
+│   ├── app/                    # Next.js 14 App Router
+│   │   ├── admin/             # 管理后台路由组
+│   │   │   ├── dashboard/     # 仪表盘
+│   │   │   ├── announcements/ # 公告管理
+│   │   │   ├── technicians/   # 技师管理
+│   │   │   ├── customer-service/ # 客服管理
+│   │   │   ├── media/         # 媒体文件管理
+│   │   │   ├── system/        # 系统监控
+│   │   │   └── settings/      # 系统设置
+│   │   ├── api/               # API路由
+│   │   │   ├── technicians/   # 技师相关API
+│   │   │   ├── announcements/ # 公告API
+│   │   │   ├── customer-service/ # 客服API
+│   │   │   ├── upload/        # 文件上传API
+│   │   │   ├── distance-calculation/ # 距离计算API
+│   │   │   └── admin/         # 管理后台API
+│   │   ├── components/        # 共享组件
+│   │   │   ├── ui/           # UI基础组件（Shadcn/ui等）
+│   │   │   ├── custom/       # 自定义业务组件
+│   │   │   └── layout/       # 布局组件
+│   │   ├── lib/              # 工具函数
+│   │   └── globals.css       # 全局样式
+├── data/                      # JSON数据文件存储
+│   ├── technicians.json      # 技师信息数据
+│   ├── announcements.json    # 公告信息数据
+│   ├── customer-service.json # 客服信息数据
+│   └── admin.json           # 管理员信息数据
+├── public/                   # 静态资源
+│   ├── assets/              # 项目资源（logo等）
+│   └── uploads/             # 上传文件目录
+└── docker-compose.yml       # 容器配置
+```
+
+## 核心开发规范 ⚡
+### 代码质量要求
+1. **TypeScript严格模式** - 必须启用strict模式
+2. **组件开发** - 使用函数式组件+Hooks
+3. **样式优先级** - Tailwind CSS > 自定义CSS
+4. **图片优化** - 必须使用Next.js Image组件
+5. **API标准** - 使用标准HTTP状态码
+6. **错误处理** - 完善的错误处理和用户友好提示
+7. **数据操作** - 使用JSON文件存储，需要实现数据操作工具类
+8. **命名规范** - 文件kebab-case，组件PascalCase
+9. **代码注释** - 复杂业务逻辑必须注释
+10. **UI组件优先** - 优先使用现成资源
+
+### 性能优化规范（2核4G服务器，JSON存储版）
+- **内存限制** - Next.js应用最大3.5GB（无需数据库内存分配）
+- **文件大小** - 图片≤2MB，视频≤10MB，缩略图≤200KB
+- **加载优化** - 图片懒加载，代码分割，Gzip压缩
+- **缓存策略** - JSON数据内存缓存，API响应缓存，浏览器缓存
+- **JSON优化** - 启用JSON文件缓存，减少磁盘I/O操作
+
+### 安全开发规范
+- **输入验证** - 所有用户输入必须验证
+- **JSON注入防护** - 严格验证JSON数据格式和内容
+- **XSS防护** - 输出内容转义
+- **文件上传安全** - 类型验证，大小限制，病毒扫描
+- **敏感信息** - 必须加密存储
+- **操作日志** - 记录所有管理员操作
+- **文件锁机制** - 防止并发写入JSON文件时的数据损坏
+
+### 移动端开发规范
+- **移动端优先** - Mobile First设计
+- **触摸优化** - 按钮最小44px
+- **手势支持** - 滑动、缩放、拖拽
+- **响应式断点** - sm(640px), md(768px), lg(1024px)
+
+## 品牌设计规范
+### 色彩系统
+- 主色调：深蓝色 #1A2B5C
+- 辅助色：金色 #D4AF37
+- 背景色：白色 #FFFFFF
+- 卡片背景：浅灰 #F5F5F5
+
+### 城市主题色
+- 南京：金陵金 #D4AF37
+- 苏州：园林绿 green-500
+- 杭州：西湖蓝 blue-500
+- 武汉：樱花粉 pink-500
+- 郑州：黄河金 orange-500
+
+### 字体规范
+- 标题：text-2xl (24px)
+- 副标题：text-xl (20px)
+- 正文：text-base (16px)
+- 小字：text-sm (14px)
+
+## 关键配置信息
+### 环境变量
+```env
+DATA_PATH="./data"
+BAIDU_MAP_AK="qX0HXOj8pLLi0QdvvMpfScXdh6SllUqd"
+ADMIN_PASSWORD="junyue123.123"
+UPLOAD_PATH="./public/uploads"
+JSON_CACHE_ENABLED=true
+JSON_BACKUP_ENABLED=true
+```
+
+### API端点规范
+```
+GET  /api/technicians              # 获取技师列表
+GET  /api/technicians/[id]         # 获取技师详情
+GET  /api/announcements            # 获取公告列表
+GET  /api/customer-service         # 获取客服信息
+POST /api/upload                   # 文件上传
+GET  /api/distance-calculation     # 距离计算
+
+# 管理后台API
+POST /api/admin/login              # 管理员登录
+GET  /api/admin/technicians        # 技师管理
+POST /api/admin/technicians        # 创建技师
+PUT  /api/admin/technicians/[id]   # 更新技师
+DELETE /api/admin/technicians/[id] # 删除技师
+```
+
+## 重要提醒 ⚠️
+- 这是SPA服务展示网站，内容需合规
+- 用户必须年满18岁
+- 遵守香港特别行政区相关法律法规
+- 所有敏感信息加密存储
+- **详细的功能需求、数据库结构、部署配置等请参考：需求文档.md**
+
+## 开发优先级
+1. **UI组件库搜索使用** - 必须优先搜索现成组件
+2. **性能优化** - 针对2核4G服务器优化
+3. **移动端适配** - Mobile First
+4. **安全性** - 数据安全和用户隐私
+5. **用户体验** - 响应速度和交互体验

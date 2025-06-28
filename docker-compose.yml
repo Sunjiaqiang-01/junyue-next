@@ -1,0 +1,121 @@
+version: '3.8'
+
+services:
+  # Next.js应用服务
+  junyue-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: junyue-nextjs
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    env_file:
+      - .env.production
+    volumes:
+      # 数据持久化
+      - ./data:/app/data
+      # 上传文件持久化
+      - ./public/uploads:/app/public/uploads
+      # 日志持久化
+      - ./logs:/app/logs
+    networks:
+      - junyue-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # 资源限制（针对2核4G服务器）
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 1G
+
+  # Nginx反向代理服务
+  junyue-nginx:
+    image: nginx:1.25-alpine
+    container_name: junyue-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Nginx配置文件
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      # SSL证书（如果有的话）
+      - ./ssl:/etc/nginx/ssl:ro
+      # 静态文件直接服务
+      - ./public:/var/www/public:ro
+      # 日志持久化
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      junyue-app:
+        condition: service_healthy
+    networks:
+      - junyue-network
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    # 资源限制
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+
+  # Watchtower - 自动更新容器（可选）
+  watchtower:
+    image: containrrr/watchtower
+    container_name: junyue-watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=86400  # 24小时检查一次
+      - WATCHTOWER_INCLUDE_STOPPED=true
+    command: junyue-nextjs junyue-nginx
+    networks:
+      - junyue-network
+
+networks:
+  junyue-network:
+    driver: bridge
+    name: junyue-network
+
+volumes:
+  # 数据卷定义
+  junyue-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data
+  
+  junyue-uploads:
+    driver: local
+    driver_opts:
+      type: none  
+      o: bind
+      device: ./public/uploads
+      
+  junyue-logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./logs 

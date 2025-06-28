@@ -1,0 +1,49 @@
+{
+  "customerService": [
+    {
+      "id": "cs_nanjing",
+      "city": "南京",
+      "wechatId": "sunjiaqiang1997",
+      "qrCodePath": "/uploads/customer-service/南京客服.png",
+      "workHours": "12:00-24:00",
+      "isActive": true,
+      "updatedAt": "2025-06-28T05:43:27.911Z"
+    },
+    {
+      "id": "cs_suzhou",
+      "city": "苏州",
+      "wechatId": "kangyangzy002",
+      "qrCodePath": "/uploads/customer-service/苏州客服.png",
+      "workHours": "12:00-24:00",
+      "isActive": true,
+      "updatedAt": "2025-06-28T05:44:03.703Z"
+    },
+    {
+      "id": "cs_hangzhou",
+      "city": "杭州",
+      "wechatId": "Conqueror___",
+      "qrCodePath": "/uploads/customer-service/杭州客服.jpg",
+      "workHours": "12:00-24:00",
+      "isActive": true,
+      "updatedAt": "2025-06-28T05:46:06.790Z"
+    },
+    {
+      "id": "cs_wuhan",
+      "city": "武汉",
+      "wechatId": "jiugehui0001",
+      "qrCodePath": "/uploads/customer-service/武汉客服.png",
+      "workHours": "12:00-24:00",
+      "isActive": true,
+      "updatedAt": "2025-06-28T05:44:36.703Z"
+    },
+    {
+      "id": "cs_zhengzhou",
+      "city": "郑州",
+      "wechatId": "geig456789",
+      "qrCodePath": "/uploads/customer-service/郑州客服.jpg",
+      "workHours": "12:00-24:00",
+      "isActive": true,
+      "updatedAt": "2025-06-28T05:45:13.272Z"
+    }
+  ]
+}

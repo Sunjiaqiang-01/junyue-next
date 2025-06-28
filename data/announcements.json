@@ -1,0 +1,24 @@
+{
+  "announcements": [
+    {
+      "id": "ann_003",
+      "title": "公众号，网址随时都有可能被限制，欢迎各位老板加入QQ群：573077790，查看最新网址~~",
+      "content": "★★ 访问网站卡顿，图片加载慢，加载不出来，是网络问题，可以上魔法，QQ群内有免费好用的魔法工具教程！！",
+      "type": "urgent",
+      "priority": 3,
+      "isActive": true,
+      "createdAt": "2024-01-03T00:00:00Z",
+      "updatedAt": "2025-06-28T06:23:24.885Z"
+    },
+    {
+      "title": "客服在线时间为12:00-24:00",
+      "content": "其他时间没回估计就是没睡醒~~着急可以打电话",
+      "type": "normal",
+      "isActive": true,
+      "priority": 1,
+      "id": "mcfuvbrwh8vje7a8737",
+      "createdAt": "2025-06-28T06:24:00.860Z",
+      "updatedAt": "2025-06-28T06:24:00.860Z"
+    }
+  ]
+}

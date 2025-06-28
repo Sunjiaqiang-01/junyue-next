@@ -23,12 +23,12 @@ services:
       - ./logs:/app/logs
     networks:
       - junyue-network
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+    # healthcheck:
+    #   test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3
+    #   start_period: 40s
     # 资源限制（针对2核4G服务器）
     deploy:
       resources:
@@ -58,8 +58,7 @@ services:
       # 日志持久化
       - ./logs/nginx:/var/log/nginx
     depends_on:
-      junyue-app:
-        condition: service_healthy
+      - junyue-app
     networks:
       - junyue-network
     healthcheck:

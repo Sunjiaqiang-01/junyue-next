@@ -24,7 +24,7 @@ export interface UseLocationReturn {
   permission: PermissionState | null
   accuracy: number | null
   lastUpdated: number | null
-
+  
   getCurrentLocation: () => Promise<void>
   requestPermission: () => Promise<boolean>
   clearLocation: () => void

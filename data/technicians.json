@@ -69,7 +69,7 @@
       ],
       "id": "mcf8xduqcxpdmw2agej",
       "createdAt": "2025-06-27T20:09:45.314Z",
-      "updatedAt": "2025-06-28T07:02:17.505Z"
+      "updatedAt": "2025-06-29T17:09:19.942Z"
     },
     {
       "nickname": "天佑",
@@ -90,43 +90,43 @@
       "media": [
         {
           "type": "image",
-          "path": "/uploads/technicians/天佑/2bf63a99e41f70c6dfc75f3e70fe47a9.jpg",
-          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_2bf63a99e41f70c6dfc75f3e70fe47a9.jpg",
+          "path": "/uploads/technicians/天佑/132951168f8ac5c978c9c752af99abc4.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_132951168f8ac5c978c9c752af99abc4.jpg",
           "description": "天佑的照片",
           "sortOrder": 1
-        },
-        {
-          "type": "image",
-          "path": "/uploads/technicians/天佑/5bfae8117c8b999a9292108355c66e26.jpg",
-          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_5bfae8117c8b999a9292108355c66e26.jpg",
-          "description": "天佑的照片",
-          "sortOrder": 2
-        },
-        {
-          "type": "image",
-          "path": "/uploads/technicians/天佑/79ec82df424c3f6fe487d08d7726ad4b.jpg",
-          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_79ec82df424c3f6fe487d08d7726ad4b.jpg",
-          "description": "天佑的照片",
-          "sortOrder": 3
-        },
-        {
-          "type": "image",
-          "path": "/uploads/technicians/天佑/7e565e7af31d3fc30cc2845287c3169e.jpg",
-          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_7e565e7af31d3fc30cc2845287c3169e.jpg",
-          "description": "天佑的照片",
-          "sortOrder": 4
         },
         {
           "type": "image",
           "path": "/uploads/technicians/天佑/15f24f9fff0f4a7cf1ffb5f5893b1a7b.jpg",
           "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_15f24f9fff0f4a7cf1ffb5f5893b1a7b.jpg",
           "description": "天佑的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/2bf63a99e41f70c6dfc75f3e70fe47a9.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_2bf63a99e41f70c6dfc75f3e70fe47a9.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/5bfae8117c8b999a9292108355c66e26.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_5bfae8117c8b999a9292108355c66e26.jpg",
+          "description": "天佑的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/天佑/79ec82df424c3f6fe487d08d7726ad4b.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_79ec82df424c3f6fe487d08d7726ad4b.jpg",
+          "description": "天佑的照片",
           "sortOrder": 5
         },
         {
           "type": "image",
-          "path": "/uploads/technicians/天佑/132951168f8ac5c978c9c752af99abc4.jpg",
-          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_132951168f8ac5c978c9c752af99abc4.jpg",
+          "path": "/uploads/technicians/天佑/7e565e7af31d3fc30cc2845287c3169e.jpg",
+          "thumbnail": "/uploads/technicians/天佑/thumbnails/thumb_7e565e7af31d3fc30cc2845287c3169e.jpg",
           "description": "天佑的照片",
           "sortOrder": 6
         },
@@ -140,7 +140,7 @@
       ],
       "id": "mcf91b4u8pm10zlpjiu",
       "createdAt": "2025-06-27T20:12:48.414Z",
-      "updatedAt": "2025-06-28T07:03:05.529Z"
+      "updatedAt": "2025-06-29T17:09:19.940Z"
     },
     {
       "nickname": "小杰",
@@ -204,7 +204,71 @@
       ],
       "id": "mcfaix6cm1ze5zlp8yc",
       "createdAt": "2025-06-27T20:54:29.748Z",
-      "updatedAt": "2025-06-28T07:03:52.446Z"
+      "updatedAt": "2025-06-29T17:09:19.941Z"
+    },
+    {
+      "nickname": "CX",
+      "age": 25,
+      "height": 185,
+      "weight": 70,
+      "features": "牌17，直男，全能，大连体育生，退役",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "南京万达广场万达中心-G座",
+      "latitude": 32.035560832217136,
+      "longitude": 118.7438356731739,
+      "area": "福园街133号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/CX/19679065cd026b15fdf76471fe7f6ad3_.jpg",
+          "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_19679065cd026b15fdf76471fe7f6ad3_.jpg",
+          "description": "CX的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/CX/7fc2ef5e6476fafc0cbd98c459c15559.jpg",
+          "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_7fc2ef5e6476fafc0cbd98c459c15559.jpg",
+          "description": "CX的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/CX/9894669bad6f9b006c4bafed80ed052f_.jpg",
+          "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_9894669bad6f9b006c4bafed80ed052f_.jpg",
+          "description": "CX的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/CX/ac7cc805cda37b0f073afdb72d561f21.jpg",
+          "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_ac7cc805cda37b0f073afdb72d561f21.jpg",
+          "description": "CX的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/CX/bb5d8dad619766dcf46e3e82bb1d8778.jpg",
+          "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_bb5d8dad619766dcf46e3e82bb1d8778.jpg",
+          "description": "CX的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/CX/5787fabb783c46410a4d4ceb5480b332_4.mp4",
+          "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_5787fabb783c46410a4d4ceb5480b332_4.jpg",
+          "description": "CX的视频",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mchxcnzifnfclqkjvrm",
+      "createdAt": "2025-06-29T17:09:01.422Z",
+      "updatedAt": "2025-06-29T17:14:16.174Z"
     }
   ]
 }

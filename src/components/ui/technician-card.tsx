@@ -136,16 +136,7 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
             )}
           </div>
 
-          {/* 距离显示 */}
-          <div 
-            className="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded z-10 cursor-pointer hover:bg-black/80 transition-colors flex items-center gap-1"
-            onClick={!currentUserLocation ? handleGetLocation : undefined}
-            title={!currentUserLocation ? '点击获取位置' : ''}
-          >
-            {!currentUserLocation && <Navigation className="w-3 h-3" />}
-            {distanceLoading && <RefreshCw className="w-3 h-3 animate-spin" />}
-            <span>距离您 {getDisplayDistance()}</span>
-          </div>
+          {/* 距离显示已禁用 */}
         </div>
 
         {/* 技师信息 */}

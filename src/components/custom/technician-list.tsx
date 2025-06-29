@@ -228,54 +228,7 @@ export function TechnicianList({ technicians: propTechnicians, className = '' }:
 
   return (
     <div className={`space-y-6 ${className}`}>
-      {/* 位置状态栏 */}
-      <Card className="p-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className={`text-sm font-medium ${getLocationStatusColor()}`}>
-              {getLocationStatus()}
-            </span>
-            {distanceLoading && (
-              <span className="text-xs text-blue-600">计算距离中...</span>
-            )}
-          </div>
-          <div className="flex space-x-2">
-            {!location && (
-              <Button 
-                onClick={handleGetLocation}
-                disabled={locationLoading}
-                size="sm"
-              >
-                {locationLoading ? '获取中...' : '获取位置'}
-              </Button>
-            )}
-            {location && (
-              <Button 
-                onClick={clearLocation}
-                variant="outline"
-                size="sm"
-              >
-                清除位置
-              </Button>
-            )}
-          </div>
-        </div>
-        
-        {(locationError || distanceError) && (
-          <div className="mt-2 p-2 bg-red-50 border border-red-200 rounded text-sm text-red-800">
-            {locationError && <p>位置错误: {locationError}</p>}
-            {distanceError && <p>距离计算错误: {distanceError}</p>}
-            <Button 
-              onClick={() => setShowLocationGuide(true)}
-              variant="outline"
-              size="sm"
-              className="mt-2"
-            >
-              查看解决方案
-            </Button>
-          </div>
-        )}
-      </Card>
+      {/* 位置功能已禁用 - 状态栏移除 */}
 
       {/* 筛选器 */}
       <TechnicianFilters 
@@ -365,18 +318,7 @@ export function TechnicianList({ technicians: propTechnicians, className = '' }:
         </Card>
       )}
 
-      {/* 位置服务说明 */}
-      {!location && !locationLoading && !locationError && technicians.length > 0 && (
-        <Card className="p-4 bg-blue-50 border-blue-200">
-          <div className="flex items-start space-x-2">
-            <span className="text-blue-600">💡</span>
-            <div className="text-sm text-blue-800">
-              <p className="font-medium">提示：获取位置以查看准确距离</p>
-              <p>允许位置访问后，我们将为您计算到各技师的真实距离，并按距离排序。</p>
-            </div>
-          </div>
-        </Card>
-      )}
+      {/* 位置服务提示已移除 */}
     </div>
   )
 } 

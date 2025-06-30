@@ -44,6 +44,7 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
     address,
     latitude,
     longitude,
+    area,
     media,
     isNew,
     isRecommended
@@ -163,11 +164,13 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
               <MapPin className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-700 font-medium">
-                  {address.split('，')[0] || address.split(',')[0]}
-                </p>
-                <p className="text-xs text-gray-500 line-clamp-1">
                   {address}
                 </p>
+                {area && (
+                  <p className="text-xs text-gray-500 line-clamp-1">
+                    {area}
+                  </p>
+                )}
               </div>
             </div>
             

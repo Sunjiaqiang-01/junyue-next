@@ -51,8 +51,9 @@ services:
       # Nginx配置文件
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      # SSL证书
-      - ./ssl:/etc/nginx/ssl:ro
+      # SSL证书（直接映射证书文件）
+      - /etc/letsencrypt/live/junyuecaihong.xyz/fullchain.pem:/etc/nginx/ssl/cert.pem:ro
+      - /etc/letsencrypt/live/junyuecaihong.xyz/privkey.pem:/etc/nginx/ssl/key.pem:ro
       # 静态文件直接服务
       - ./public:/var/www/public:ro
       # 日志持久化
@@ -117,4 +118,4 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ./logs
+      device: ./logs 

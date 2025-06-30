@@ -25,11 +25,41 @@ server {
     ssl_certificate /etc/nginx/ssl/cert.pem;
     ssl_certificate_key /etc/nginx/ssl/key.pem;
     
-    # 静态资源处理
+    # 开启访问日志，便于调试
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log debug;
+    
+    # 静态资源处理 - 为图片添加适当缓存
     location /uploads/ {
-        root /var/www/public;
-        expires 1y;
-        add_header Cache-Control "public";
+        alias /var/www/public/uploads/;
+        
+        # 只有在访问管理后台时才禁用缓存
+        if ($http_referer ~* "/admin") {
+            expires -1;
+            add_header Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0";
+            add_header Pragma "no-cache";
+        }
+        
+        # 前台用户访问时使用缓存
+        if ($http_referer !~* "/admin") {
+            expires 7d;
+            add_header Cache-Control "public, max-age=604800";
+            add_header Vary Accept-Encoding;
+        }
+        
+        # 添加文件类型特定的缓存规则
+        location ~* \.(jpg|jpeg|png|gif|webp)$ {
+            expires 7d;
+            add_header Cache-Control "public, max-age=604800";
+            add_header Vary Accept-Encoding;
+        }
+        
+        # 添加CORS头，允许客户端缓存
+        add_header Access-Control-Allow-Origin "*";
+        
+        # 禁止访问目录列表
+        autoindex off;
+        
         try_files $uri =404;
     }
 
@@ -60,11 +90,37 @@ server {
     listen 80;
     server_name localhost;
 
-    # 静态资源处理
+    # 静态资源处理 - 与生产环境保持一致的缓存策略
     location /uploads/ {
-        root /var/www/public;
-        expires 1y;
-        add_header Cache-Control "public";
+        alias /var/www/public/uploads/;
+        
+        # 只有在访问管理后台时才禁用缓存
+        if ($http_referer ~* "/admin") {
+            expires -1;
+            add_header Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0";
+            add_header Pragma "no-cache";
+        }
+        
+        # 前台用户访问时使用缓存
+        if ($http_referer !~* "/admin") {
+            expires 7d;
+            add_header Cache-Control "public, max-age=604800";
+            add_header Vary Accept-Encoding;
+        }
+        
+        # 添加文件类型特定的缓存规则
+        location ~* \.(jpg|jpeg|png|gif|webp)$ {
+            expires 7d;
+            add_header Cache-Control "public, max-age=604800";
+            add_header Vary Accept-Encoding;
+        }
+        
+        # 添加CORS头，允许客户端缓存
+        add_header Access-Control-Allow-Origin "*";
+        
+        # 禁止访问目录列表
+        autoindex off;
+        
         try_files $uri =404;
     }
 

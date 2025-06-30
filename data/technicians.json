@@ -2191,7 +2191,7 @@
       "weight": 65,
       "features": "牌17.5，圈内，全能，农🐂，Sm",
       "isNew": false,
-      "isRecommended": false,
+      "isRecommended": true,
       "isActive": true,
       "address": "吉庆街",
       "latitude": 30.588911035415308,
@@ -2246,7 +2246,7 @@
       ],
       "id": "mcja43b5d95nkb785ns",
       "createdAt": "2025-06-30T15:54:02.561Z",
-      "updatedAt": "2025-06-30T15:54:02.561Z"
+      "updatedAt": "2025-06-30T17:08:07.788Z"
     },
     {
       "nickname": "大普",
@@ -2526,6 +2526,292 @@
       "id": "mcjah5gp56l3vtct5i7",
       "createdAt": "2025-06-30T16:04:11.881Z",
       "updatedAt": "2025-06-30T16:04:11.881Z"
+    },
+    {
+      "nickname": "范范",
+      "age": 21,
+      "height": 178,
+      "weight": 60,
+      "features": "牌 15 圈内 10偏0",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "华润悦府",
+      "latitude": 34.76291216303409,
+      "longitude": 113.6677467719932,
+      "area": "郑州市二七区西太康路78号",
+      "cities": [
+        "zhengzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/fanfan/1751302796789_1cc823e1a01d5e853cb73cadd74987d5.jpg",
+          "thumbnail": "/uploads/technicians/fanfan/thumbnails/thumb_1751302796789_1cc823e1a01d5e853cb73cadd74987d5.jpg",
+          "description": "范范的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/fanfan/1751302797583_1e1c8cd70e31b29a410278e8a88cd87a.jpg",
+          "thumbnail": "/uploads/technicians/fanfan/thumbnails/thumb_1751302797583_1e1c8cd70e31b29a410278e8a88cd87a.jpg",
+          "description": "范范的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/fanfan/1751302798056_6ffda66fadc38638832733a8005d2cc9.jpg",
+          "thumbnail": "/uploads/technicians/fanfan/thumbnails/thumb_1751302798056_6ffda66fadc38638832733a8005d2cc9.jpg",
+          "description": "范范的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/fanfan/1751302798823_253e7cf7e9f1192d9a00a466f01c5d11.jpg",
+          "thumbnail": "/uploads/technicians/fanfan/thumbnails/thumb_1751302798823_253e7cf7e9f1192d9a00a466f01c5d11.jpg",
+          "description": "范范的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/fanfan/1751302799102_2690b38dd20fdc035b1a527736cf0097.jpg",
+          "thumbnail": "/uploads/technicians/fanfan/thumbnails/thumb_1751302799102_2690b38dd20fdc035b1a527736cf0097.jpg",
+          "description": "范范的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/fanfan/1751302799749_a912f29a5593ea33939673e26c78b05c.jpg",
+          "thumbnail": "/uploads/technicians/fanfan/thumbnails/thumb_1751302799749_a912f29a5593ea33939673e26c78b05c.jpg",
+          "description": "范范的照片",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mcjch52ei44kvtneuv7",
+      "createdAt": "2025-06-30T17:00:10.598Z",
+      "updatedAt": "2025-06-30T17:00:10.598Z"
+    },
+    {
+      "nickname": "三水弟弟",
+      "age": 24,
+      "height": 178,
+      "weight": 65,
+      "features": "牌17 圈内 10 平易近人，口活小王子，为人实诚",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "南五里堡",
+      "latitude": 34.72629733830285,
+      "longitude": 113.68856832591733,
+      "area": "地铁2号线; 地铁5号线内环; 地铁5号线外环",
+      "cities": [
+        "zhengzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/sanshuididi/1751303051057_3.jpg",
+          "thumbnail": "/uploads/technicians/sanshuididi/thumbnails/thumb_1751303051057_3.jpg",
+          "description": "三水弟弟的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/sanshuididi/1751303051618_4.jpg",
+          "thumbnail": "/uploads/technicians/sanshuididi/thumbnails/thumb_1751303051618_4.jpg",
+          "description": "三水弟弟的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/sanshuididi/1751303051943_5.jpg",
+          "thumbnail": "/uploads/technicians/sanshuididi/thumbnails/thumb_1751303051943_5.jpg",
+          "description": "三水弟弟的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/sanshuididi/1751303053680_6.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "三水弟弟的视频",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcjcmi6n4n2blwhg4bn",
+      "createdAt": "2025-06-30T17:04:20.879Z",
+      "updatedAt": "2025-06-30T17:04:20.879Z"
+    },
+    {
+      "nickname": "小博",
+      "age": 20,
+      "height": 175,
+      "weight": 55,
+      "features": "圈外直男",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "郑州国际会展中心",
+      "latitude": 34.7785425020622,
+      "longitude": 113.73549311084204,
+      "area": "郑东新区商务内环路中央公园1号",
+      "cities": [
+        "zhengzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaobo/1751303212021_f67df4d2ead300479d98bf3322bc002c.jpg",
+          "thumbnail": "/uploads/technicians/xiaobo/thumbnails/thumb_1751303212021_f67df4d2ead300479d98bf3322bc002c.jpg",
+          "description": "小博的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaobo/1751303212941_f9441e6569705e238ab32d840e0d889c.jpg",
+          "thumbnail": "/uploads/technicians/xiaobo/thumbnails/thumb_1751303212941_f9441e6569705e238ab32d840e0d889c.jpg",
+          "description": "小博的照片",
+          "sortOrder": 2
+        }
+      ],
+      "id": "mcjcq0nvvkiyjif0je",
+      "createdAt": "2025-06-30T17:07:04.795Z",
+      "updatedAt": "2025-06-30T17:07:04.795Z"
+    },
+    {
+      "nickname": "小凡",
+      "age": 23,
+      "height": 182,
+      "weight": 75,
+      "features": "牌17 直男可做1 只上门",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "",
+      "latitude": 0,
+      "longitude": 0,
+      "area": "",
+      "cities": [
+        "zhengzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaofan/1751303372606_28b405934ef9d87aea27e6ae089c34d.jpg",
+          "thumbnail": "/uploads/technicians/xiaofan/thumbnails/thumb_1751303372606_28b405934ef9d87aea27e6ae089c34d.jpg",
+          "description": "小凡的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaofan/1751303373212_d240c96bdf4977fb67320522e483886.jpg",
+          "thumbnail": "/uploads/technicians/xiaofan/thumbnails/thumb_1751303373212_d240c96bdf4977fb67320522e483886.jpg",
+          "description": "小凡的照片",
+          "sortOrder": 2
+        }
+      ],
+      "id": "mcjct9f8xjsahq2ylql",
+      "createdAt": "2025-06-30T17:09:36.116Z",
+      "updatedAt": "2025-06-30T17:09:36.116Z"
+    },
+    {
+      "nickname": "小航",
+      "age": 21,
+      "height": 180,
+      "weight": 70,
+      "features": "牌17 直男 按摩调琴可以体推✈️ 只上门",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "",
+      "latitude": 0,
+      "longitude": 0,
+      "area": "",
+      "cities": [
+        "zhengzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaohang/1751303555040_1.jpg",
+          "thumbnail": "/uploads/technicians/xiaohang/thumbnails/thumb_1751303555040_1.jpg",
+          "description": "小航的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaohang/1751303555756_2.jpg",
+          "thumbnail": "/uploads/technicians/xiaohang/thumbnails/thumb_1751303555756_2.jpg",
+          "description": "小航的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaohang/1751303556592_3.jpg",
+          "thumbnail": "/uploads/technicians/xiaohang/thumbnails/thumb_1751303556592_3.jpg",
+          "description": "小航的照片",
+          "sortOrder": 3
+        }
+      ],
+      "id": "mcjcx72p0nuqv4siy6t",
+      "createdAt": "2025-06-30T17:12:39.697Z",
+      "updatedAt": "2025-06-30T17:12:39.697Z"
+    },
+    {
+      "nickname": "烨南",
+      "age": 22,
+      "height": 178,
+      "weight": 55,
+      "features": "佤族 牌16.5 圈内0.5 你可以为所欲为",
+      "isNew": true,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "",
+      "latitude": 0,
+      "longitude": 0,
+      "area": "",
+      "cities": [
+        "zhengzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yenan/1751303709906_6ab51b9410b57cfe8fc99b0d2341bc76.jpg",
+          "thumbnail": "/uploads/technicians/yenan/thumbnails/thumb_1751303709906_6ab51b9410b57cfe8fc99b0d2341bc76.jpg",
+          "description": "烨南的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yenan/1751303710253_9c9d7f60651e3a902781151c97454b70.jpg",
+          "thumbnail": "/uploads/technicians/yenan/thumbnails/thumb_1751303710253_9c9d7f60651e3a902781151c97454b70.jpg",
+          "description": "烨南的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yenan/1751303710630_73859a40389da12c97a73ed49f5b35db.jpg",
+          "thumbnail": "/uploads/technicians/yenan/thumbnails/thumb_1751303710630_73859a40389da12c97a73ed49f5b35db.jpg",
+          "description": "烨南的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yenan/1751303710865_c21b84d89a986a1f469a163d734bbcca.jpg",
+          "thumbnail": "/uploads/technicians/yenan/thumbnails/thumb_1751303710865_c21b84d89a986a1f469a163d734bbcca.jpg",
+          "description": "烨南的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yenan/1751303711106_f90b4540fb73f6c7ede71bec1d635e00.jpg",
+          "thumbnail": "/uploads/technicians/yenan/thumbnails/thumb_1751303711106_f90b4540fb73f6c7ede71bec1d635e00.jpg",
+          "description": "烨南的照片",
+          "sortOrder": 5
+        }
+      ],
+      "id": "mcjd0kc6rrmi0w9m2da",
+      "createdAt": "2025-06-30T17:15:16.854Z",
+      "updatedAt": "2025-06-30T17:15:16.854Z"
     }
   ]
 }

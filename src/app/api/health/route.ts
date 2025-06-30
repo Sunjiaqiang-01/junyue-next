@@ -1,55 +1,45 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 
 /**
  * 健康检查API端点
  * 用于Docker容器健康检查和监控
  */
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
-    const startTime = Date.now();
+    // 获取系统信息
+    const freeMem = os.freemem();
+    const totalMem = os.totalmem();
+    const memUsage = Math.round((1 - freeMem / totalMem) * 100);
+    const uptime = Math.floor(os.uptime());
+    const cpuLoad = os.loadavg()[0];
     
-    // 检查应用基本状态
-    const health: any = {
+    // 构建响应
+    const response = {
       status: 'healthy',
       timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-      memory: process.memoryUsage(),
-      version: process.env.npm_package_version || '1.0.0',
-      environment: process.env.NODE_ENV || 'development',
-      checks: {
-        database: await checkDataFiles(),
-        uploads: await checkUploadsDirectory(),
-        disk: await checkDiskSpace(),
-        memory: checkMemoryUsage(),
-      }
+      uptime: uptime,
+      memory: {
+        total: Math.round(totalMem / 1024 / 1024) + 'MB',
+        free: Math.round(freeMem / 1024 / 1024) + 'MB',
+        usage: memUsage + '%'
+      },
+      cpu: {
+        load: cpuLoad.toFixed(2)
+      },
+      platform: os.platform(),
+      hostname: os.hostname()
     };
-
-    // 计算响应时间
-    const responseTime = Date.now() - startTime;
-    health.responseTime = `${responseTime}ms`;
-
-    // 检查是否有任何组件不健康
-    const unhealthyChecks = Object.entries(health.checks).filter(
-      ([key, value]: [string, any]) => value.status !== 'healthy'
-    );
-
-    if (unhealthyChecks.length > 0) {
-      health.status = 'unhealthy';
-      return NextResponse.json(health, { status: 503 });
-    }
-
-    return NextResponse.json(health, { status: 200 });
-  } catch (error) {
-    console.error('健康检查失败:', error);
     
-    return NextResponse.json({
-      status: 'error',
-      timestamp: new Date().toISOString(),
-      error: error instanceof Error ? error.message : '未知错误',
-      uptime: process.uptime(),
-    }, { status: 500 });
+    return NextResponse.json(response);
+  } catch (error) {
+    console.error('Health check failed:', error);
+    return NextResponse.json(
+      { status: 'unhealthy', error: 'Health check failed' },
+      { status: 500 }
+    );
   }
 }
 

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
 import { TechnicianMedia } from '@/lib/data/types'
 import { cn } from '@/lib/utils'
+import { getThumbnailUrl } from '@/lib/media/thumbnail'
 
 // 导入Swiper样式
 import 'swiper/css'
@@ -123,7 +124,8 @@ export function MediaCarousel({
                   ) : (
                     <div className="relative w-full h-full">
                       <Image
-                        src={item.thumbnail || item.path}
+                        // 使用统一视频缩略图函数
+                        src={getThumbnailUrl(item.type, item.thumbnail)}
                         alt={item.description || `视频 ${index + 1}`}
                         fill
                         className="object-cover"
@@ -200,7 +202,8 @@ export function MediaCarousel({
               )}
             >
               <Image
-                src={item.thumbnail || item.path}
+                // 使用统一视频缩略图函数
+                src={getThumbnailUrl(item.type, item.thumbnail)}
                 alt={`缩略图 ${index + 1}`}
                 width={64}
                 height={64}

@@ -47,7 +47,8 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
     area,
     media,
     isNew,
-    isRecommended
+    isRecommended,
+    id: technicianId
   } = technician
 
   // 计算距离
@@ -59,6 +60,28 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
     }
   }, [currentUserLocation, technician, calculateDistanceToTechnician, nickname, latitude, longitude])
 
+  // 记录技师访问数据
+  const recordTechnicianView = async () => {
+    try {
+      await fetch('/api/technician-views', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          technicianId
+        }),
+      });
+    } catch (error) {
+      console.warn(`记录技师访问失败:`, error);
+    }
+  };
+
+  // 处理媒体查看 - 记录访问
+  const handleMediaView = () => {
+    recordTechnicianView();
+  };
+
   // 处理地图导航
   const handleMapNavigation = (type: 'baidu' | 'gaode') => {
     if (!latitude || !longitude) {
@@ -67,6 +90,9 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
     }
 
     try {
+      // 记录技师访问
+      recordTechnicianView();
+      
       const lat = parseFloat(latitude.toString())
       const lng = parseFloat(longitude.toString())
       
@@ -184,6 +210,8 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
 
   // 处理预约
   const handleBooking = () => {
+    // 记录技师访问
+    recordTechnicianView();
     showInfo('预约服务', `联系客服预约 ${nickname}`)
   }
 
@@ -218,7 +246,8 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
 
   return (
     <>
-      <div className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${className}`}>
+      <div className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${className}`}
+           onClick={handleMediaView}>
         {/* 媒体轮播 */}
         <div className="relative">
           <MediaCarousel
@@ -281,14 +310,20 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
             {/* 地图按钮 */}
             <div className="flex space-x-2 mt-2">
               <button
-                onClick={() => handleMapNavigation('baidu')}
+                onClick={(e) => {
+                  e.stopPropagation(); // 防止冒泡到卡片点击
+                  handleMapNavigation('baidu');
+                }}
                 className="flex-1 px-3 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors flex items-center justify-center gap-1"
               >
                 <span>🧭</span>
                 百度地图
               </button>
               <button
-                onClick={() => handleMapNavigation('gaode')}
+                onClick={(e) => {
+                  e.stopPropagation(); // 防止冒泡到卡片点击
+                  handleMapNavigation('gaode');
+                }}
                 className="flex-1 px-3 py-1 text-xs bg-green-500 text-white rounded hover:bg-green-600 transition-colors flex items-center justify-center gap-1"
               >
                 <span>🧭</span>

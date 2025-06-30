@@ -28,12 +28,48 @@ const nextConfig = {
         hostname: 'junyuecaihong.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'junyuecaihong.xyz',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'junyuecaihong.xyz',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.junyuecaihong.xyz',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'www.junyuecaihong.xyz',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: '**', // 允许任何域名
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**', // 允许任何域名
+        pathname: '/**',
+      },
     ],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // 添加禁用缓存
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    path: '/_next/image', 
+    domains: ['localhost', 'junyuecaihong.xyz', 'www.junyuecaihong.xyz', 'junyuecaihong.com'],
+    disableStaticImages: false,
   },
   
   // 性能优化（针对2核4G服务器）
@@ -80,7 +116,15 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400',
+            value: 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+          },
+          {
+            key: 'Pragma',
+            value: 'no-cache',
+          },
+          {
+            key: 'Expires',
+            value: '0',
           },
         ],
       },

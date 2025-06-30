@@ -40,10 +40,12 @@ COPY --from=builder /app/public ./public
 
 # 创建上传目录并设置权限
 RUN mkdir -p ./public/uploads
-RUN chown nextjs:nodejs ./public/uploads
+RUN chmod -R 777 ./public/uploads  # 使用777权限确保所有用户都可以读写
+RUN chown -R nextjs:nodejs ./public/uploads
 
 # 复制数据目录并设置权限
 COPY --from=builder /app/data ./data
+RUN chmod -R 777 ./data  # 同样设置为777权限
 RUN chown -R nextjs:nodejs ./data
 
 # 自动利用输出跟踪来减少镜像大小

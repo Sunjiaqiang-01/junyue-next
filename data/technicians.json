@@ -69,7 +69,7 @@
       ],
       "id": "mcf8xduqcxpdmw2agej",
       "createdAt": "2025-06-27T20:09:45.314Z",
-      "updatedAt": "2025-06-29T17:09:19.942Z"
+      "updatedAt": "2025-06-30T15:40:21.856Z"
     },
     {
       "nickname": "天佑",
@@ -140,7 +140,7 @@
       ],
       "id": "mcf91b4u8pm10zlpjiu",
       "createdAt": "2025-06-27T20:12:48.414Z",
-      "updatedAt": "2025-06-29T17:09:19.940Z"
+      "updatedAt": "2025-06-30T15:40:21.840Z"
     },
     {
       "nickname": "小杰",
@@ -148,8 +148,8 @@
       "height": 178,
       "weight": 65,
       "features": "牌17，圈内，全能，阳光体育生，鲜肉颜值，大牌，顶级按摩调琴",
-      "isNew": true,
-      "isRecommended": false,
+      "isNew": false,
+      "isRecommended": true,
       "isActive": true,
       "address": "南京万达广场-万达中心",
       "latitude": 32.03561592948362,
@@ -204,14 +204,14 @@
       ],
       "id": "mcfaix6cm1ze5zlp8yc",
       "createdAt": "2025-06-27T20:54:29.748Z",
-      "updatedAt": "2025-06-29T17:09:19.941Z"
+      "updatedAt": "2025-06-30T15:40:21.844Z"
     },
     {
       "nickname": "CX",
       "age": 25,
       "height": 185,
       "weight": 70,
-      "features": "牌17，直男，全能，大连体育生，退役",
+      "features": "牌17，直男，不做1069，大连体育生，退役",
       "isNew": true,
       "isRecommended": false,
       "isActive": true,
@@ -229,6 +229,13 @@
           "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_19679065cd026b15fdf76471fe7f6ad3_.jpg",
           "description": "CX的照片",
           "sortOrder": 1
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/CX/5787fabb783c46410a4d4ceb5480b332_4.mp4",
+          "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_5787fabb783c46410a4d4ceb5480b332_4.jpg",
+          "description": "CX的视频",
+          "sortOrder": 2
         },
         {
           "type": "image",
@@ -257,18 +264,2268 @@
           "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_bb5d8dad619766dcf46e3e82bb1d8778.jpg",
           "description": "CX的照片",
           "sortOrder": 6
-        },
-        {
-          "type": "video",
-          "path": "/uploads/technicians/CX/5787fabb783c46410a4d4ceb5480b332_4.mp4",
-          "thumbnail": "/uploads/technicians/CX/thumbnails/thumb_5787fabb783c46410a4d4ceb5480b332_4.jpg",
-          "description": "CX的视频",
-          "sortOrder": 6
         }
       ],
       "id": "mchxcnzifnfclqkjvrm",
       "createdAt": "2025-06-29T17:09:01.422Z",
-      "updatedAt": "2025-06-29T17:14:16.174Z"
+      "updatedAt": "2025-06-30T15:40:21.830Z"
+    },
+    {
+      "nickname": "文彬",
+      "age": 23,
+      "height": 187,
+      "weight": 78,
+      "features": "牌18，直男，全能，态度认真，肌肉线条清晰明了，皮肤好",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "孜图酒店(南京明故宫店)",
+      "latitude": 32.03760660187571,
+      "longitude": 118.82265308844993,
+      "area": "瑞金路52号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/1424b249bfa547c6b5534e9cdf443e3e.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_1424b249bfa547c6b5534e9cdf443e3e.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/52dbe14724c55f27bda85d35cb7e44ee.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_52dbe14724c55f27bda85d35cb7e44ee.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/543296c6c8865a702954a5c372dfe343.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_543296c6c8865a702954a5c372dfe343.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/文彬/7369250b5f47bda84f5711fbb49fc39b.mp4",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_7369250b5f47bda84f5711fbb49fc39b.jpg",
+          "description": "文彬的视频",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/96e44dfea2234f1f19daa956d64a2222.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_96e44dfea2234f1f19daa956d64a2222.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/9e5bcd8cf03d9b3ae5175edaf3e03816.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_9e5bcd8cf03d9b3ae5175edaf3e03816.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/aa067bcb29d8de4892661c060b78e061.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_aa067bcb29d8de4892661c060b78e061.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 7
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/ab3891fa0e8ed963d6b177a34dbddcb7.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_ab3891fa0e8ed963d6b177a34dbddcb7.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 8
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/文彬/b7285e35d1ca07fb23a3e4b7c6d8a6da.mp4",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_b7285e35d1ca07fb23a3e4b7c6d8a6da.jpg",
+          "description": "文彬的视频",
+          "sortOrder": 9
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/cf00b3ad9f98ca2417b522a6bc54c28a.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_cf00b3ad9f98ca2417b522a6bc54c28a.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 10
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/文彬/da5f9011ddb8ee02926abeb82b6c4b45.jpg",
+          "thumbnail": "/uploads/technicians/文彬/thumbnails/thumb_da5f9011ddb8ee02926abeb82b6c4b45.jpg",
+          "description": "文彬的照片",
+          "sortOrder": 11
+        }
+      ],
+      "id": "mcix1yxiezyyiwxcyt",
+      "createdAt": "2025-06-30T09:48:28.566Z",
+      "updatedAt": "2025-06-30T15:40:21.847Z"
+    },
+    {
+      "nickname": "俊杰",
+      "age": 26,
+      "height": 178,
+      "weight": 70,
+      "features": "牌16，直男，不做0，其他都可，四川人，身材匀称，皮肤细腻，体校毕业，只接上🚪",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "南京市",
+      "latitude": 32.064652120624025,
+      "longitude": 118.8024218110764,
+      "area": "南京市",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/俊杰/30d5f8a42caa0ae9bd9577ff126f02b0_.jpg",
+          "thumbnail": "/uploads/technicians/俊杰/thumbnails/thumb_30d5f8a42caa0ae9bd9577ff126f02b0_.jpg",
+          "description": "俊杰的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/俊杰/3ea231d962e0bca0f633596b078f0c28_.jpg",
+          "thumbnail": "/uploads/technicians/俊杰/thumbnails/thumb_3ea231d962e0bca0f633596b078f0c28_.jpg",
+          "description": "俊杰的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/俊杰/6866fa5c882b556c409fcb2a7a483b6b_.jpg",
+          "thumbnail": "/uploads/technicians/俊杰/thumbnails/thumb_6866fa5c882b556c409fcb2a7a483b6b_.jpg",
+          "description": "俊杰的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/俊杰/696f7d337e83ec6f5fc884ef853b2bec_.png",
+          "thumbnail": "/uploads/technicians/俊杰/thumbnails/thumb_696f7d337e83ec6f5fc884ef853b2bec_.png",
+          "description": "俊杰的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/俊杰/a364828eaf282de715a3ec7c03c1f524_4.mp4",
+          "thumbnail": "/uploads/technicians/俊杰/thumbnails/thumb_a364828eaf282de715a3ec7c03c1f524_4.jpg",
+          "description": "俊杰的视频",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/俊杰/a9b104d4ac313b95a994f6a17a3e9829_.jpg",
+          "thumbnail": "/uploads/technicians/俊杰/thumbnails/thumb_a9b104d4ac313b95a994f6a17a3e9829_.jpg",
+          "description": "俊杰的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/俊杰/ab64509fa2c203235fee2e505a7f5000_.jpg",
+          "thumbnail": "/uploads/technicians/俊杰/thumbnails/thumb_ab64509fa2c203235fee2e505a7f5000_.jpg",
+          "description": "俊杰的照片",
+          "sortOrder": 7
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/俊杰/dc342e6bb54d40a9d76820ebbb561ee3_.png",
+          "thumbnail": "/uploads/technicians/俊杰/thumbnails/thumb_dc342e6bb54d40a9d76820ebbb561ee3_.png",
+          "description": "俊杰的照片",
+          "sortOrder": 8
+        }
+      ],
+      "id": "mcixcpiz5fxzj3wxneh",
+      "createdAt": "2025-06-30T09:56:49.595Z",
+      "updatedAt": "2025-06-30T15:40:21.837Z"
+    },
+    {
+      "nickname": "陨石",
+      "age": 26,
+      "height": 183,
+      "weight": 75,
+      "features": "牌18，圈内，全能",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "民族大厦",
+      "latitude": 32.04293186038426,
+      "longitude": 118.78770298546486,
+      "area": "江苏省南京市秦淮区丰富路163号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/陨石/4cdeb8b50a81577df513f1925f5a7ca.jpg",
+          "thumbnail": "/uploads/technicians/陨石/thumbnails/thumb_4cdeb8b50a81577df513f1925f5a7ca.jpg",
+          "description": "陨石的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/陨石/6ece6107223e6ebdff27ffd7eee7718.jpg",
+          "thumbnail": "/uploads/technicians/陨石/thumbnails/thumb_6ece6107223e6ebdff27ffd7eee7718.jpg",
+          "description": "陨石的照片",
+          "sortOrder": 2
+        }
+      ],
+      "id": "mcixiq0xwccr3zviixj",
+      "createdAt": "2025-06-30T10:01:30.177Z",
+      "updatedAt": "2025-06-30T15:40:21.859Z"
+    },
+    {
+      "nickname": "嘉嘉",
+      "age": 24,
+      "height": 176,
+      "weight": 67,
+      "features": "牌16，圈内，全能，江苏人，服务超一流",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "桔子酒店(南京南站店)",
+      "latitude": 31.98372741879112,
+      "longitude": 118.8015118275948,
+      "area": "江苏省南京市雨花台区玉兰路99号南京明发商业广场F1",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/嘉嘉/3b9213b7db727aa9de28defb096d1be1_.jpg",
+          "thumbnail": "/uploads/technicians/嘉嘉/thumbnails/thumb_3b9213b7db727aa9de28defb096d1be1_.jpg",
+          "description": "嘉嘉的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/嘉嘉/42da25345d1f021319a8a4ecb9f87127_.jpg",
+          "thumbnail": "/uploads/technicians/嘉嘉/thumbnails/thumb_42da25345d1f021319a8a4ecb9f87127_.jpg",
+          "description": "嘉嘉的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/嘉嘉/a951a4f6be01e8bff54855242129184c_.jpg",
+          "thumbnail": "/uploads/technicians/嘉嘉/thumbnails/thumb_a951a4f6be01e8bff54855242129184c_.jpg",
+          "description": "嘉嘉的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/嘉嘉/bc4d51f30eaa1b00164ae809a6f90d89_.jpg",
+          "thumbnail": "/uploads/technicians/嘉嘉/thumbnails/thumb_bc4d51f30eaa1b00164ae809a6f90d89_.jpg",
+          "description": "嘉嘉的照片",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcixohztrsz7yp9976j",
+      "createdAt": "2025-06-30T10:05:59.705Z",
+      "updatedAt": "2025-06-30T15:40:21.838Z"
+    },
+    {
+      "nickname": "陈陈",
+      "age": 21,
+      "height": 175,
+      "weight": 69,
+      "features": "牌17，圈内。全能",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "龙湖紫都城(南京市鼓楼区)-2座",
+      "latitude": 32.09902895777254,
+      "longitude": 118.78517865715128,
+      "area": "江苏省南京市鼓楼区建宁路12号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/陈陈/39f241c88706cf194c10ca8db0026ec0_.jpg",
+          "thumbnail": "/uploads/technicians/陈陈/thumbnails/thumb_39f241c88706cf194c10ca8db0026ec0_.jpg",
+          "description": "陈陈的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/陈陈/86e0c15a61e38fe416433609cec90161_.jpg",
+          "thumbnail": "/uploads/technicians/陈陈/thumbnails/thumb_86e0c15a61e38fe416433609cec90161_.jpg",
+          "description": "陈陈的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/陈陈/a0f2a40c74e566ccbd02c5c0a198a977_.jpg",
+          "thumbnail": "/uploads/technicians/陈陈/thumbnails/thumb_a0f2a40c74e566ccbd02c5c0a198a977_.jpg",
+          "description": "陈陈的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/陈陈/chenchen1.mp4",
+          "thumbnail": "/uploads/technicians/陈陈/thumbnails/thumb_chenchen1.jpg",
+          "description": "陈陈的视频",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/陈陈/d773cceb85a503219b05944a754720a5_.jpg",
+          "thumbnail": "/uploads/technicians/陈陈/thumbnails/thumb_d773cceb85a503219b05944a754720a5_.jpg",
+          "description": "陈陈的照片",
+          "sortOrder": 5
+        }
+      ],
+      "id": "mcizhrgknq1ec7wt1ss",
+      "createdAt": "2025-06-30T10:56:44.612Z",
+      "updatedAt": "2025-06-30T15:40:21.858Z"
+    },
+    {
+      "nickname": "阿哲",
+      "age": 25,
+      "height": 178,
+      "weight": 65,
+      "features": "牌19，圈内，纯1，新疆人，手法专业，大猛1",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "城开大厦-2幢",
+      "latitude": 32.04034758844531,
+      "longitude": 118.79244864364352,
+      "area": "南京市秦淮区洪武路198号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿哲/1750482068320.jpg",
+          "thumbnail": "/uploads/technicians/阿哲/thumbnails/thumb_1750482068320.jpg",
+          "description": "阿哲的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿哲/1750482080431.jpg",
+          "thumbnail": "/uploads/technicians/阿哲/thumbnails/thumb_1750482080431.jpg",
+          "description": "阿哲的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/阿哲/8c7283840f003e2b6397ba2f41a95af6_.jpg",
+          "thumbnail": "/uploads/technicians/阿哲/thumbnails/thumb_8c7283840f003e2b6397ba2f41a95af6_.jpg",
+          "description": "阿哲的照片",
+          "sortOrder": 3
+        }
+      ],
+      "id": "mcj2kcgspwqmgorqq2",
+      "createdAt": "2025-06-30T12:22:43.996Z",
+      "updatedAt": "2025-06-30T15:40:21.853Z"
+    },
+    {
+      "nickname": "小宝",
+      "age": 27,
+      "height": 181,
+      "weight": 72,
+      "features": "牌19，圈内，全能，山东人，调琴高手，爷们痞帅",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "城开大厦-2幢",
+      "latitude": 32.04034758844531,
+      "longitude": 118.79244864364352,
+      "area": "南京市秦淮区洪武路198号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/小宝/24a6cd866441d603f924f1f870bb2a6b.jpg",
+          "thumbnail": "/uploads/technicians/小宝/thumbnails/thumb_24a6cd866441d603f924f1f870bb2a6b.jpg",
+          "description": "小宝的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/小宝/58a8eb59bfcdcc1e5c07121cb92cfc72.jpg",
+          "thumbnail": "/uploads/technicians/小宝/thumbnails/thumb_58a8eb59bfcdcc1e5c07121cb92cfc72.jpg",
+          "description": "小宝的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/小宝/6f0b7eeb8ceebfb2ad59d843fe6f899b.mp4",
+          "thumbnail": "/uploads/technicians/小宝/thumbnails/thumb_6f0b7eeb8ceebfb2ad59d843fe6f899b_1751289034102_zq2s1d.jpg",
+          "description": "小宝的视频",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/小宝/f42f3c6c57d33c42b477a1cbe4a0ebda.mp4",
+          "thumbnail": "/uploads/technicians/小宝/thumbnails/thumb_f42f3c6c57d33c42b477a1cbe4a0ebda_1751289035453_sdtuvn.jpg",
+          "description": "小宝的视频",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcj3af0jg3yjvujewcv",
+      "createdAt": "2025-06-30T12:43:00.355Z",
+      "updatedAt": "2025-06-30T15:40:21.842Z"
+    },
+    {
+      "nickname": "阿东",
+      "age": 28,
+      "height": 182,
+      "weight": 75,
+      "features": "牌19，圈内，全能，安徽爷们，正装皮鞋，痞帅，调琴高手，手法专业",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "城开大厦-2幢",
+      "latitude": 32.04034758844531,
+      "longitude": 118.79244864364352,
+      "area": "南京市秦淮区洪武路198号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/adong/1751290227869_26c98bceda42520d9b95c2a829c7d020_.jpg",
+          "thumbnail": "/uploads/technicians/adong/thumbnails/thumb_1751290227869_26c98bceda42520d9b95c2a829c7d020_.jpg",
+          "description": "阿东的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/adong/1751290228297_7583235d61363a5360e179a0ccd7310d_.jpg",
+          "thumbnail": "/uploads/technicians/adong/thumbnails/thumb_1751290228297_7583235d61363a5360e179a0ccd7310d_.jpg",
+          "description": "阿东的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/adong/1751290228642_b6be72d1481f66a3098e6bec6f0a1d0d_.jpg",
+          "thumbnail": "/uploads/technicians/adong/thumbnails/thumb_1751290228642_b6be72d1481f66a3098e6bec6f0a1d0d_.jpg",
+          "description": "阿东的照片",
+          "sortOrder": 7
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/adong/1751290230844_ee5dd75b64878dd1f5e6bcabaffd31c9_.png",
+          "thumbnail": "/uploads/technicians/adong/thumbnails/thumb_1751290230844_ee5dd75b64878dd1f5e6bcabaffd31c9_.png",
+          "description": "阿东的照片",
+          "sortOrder": 8
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/adong/1751290231249_f15d85edee77a839b4a3c3289a75ab8d_.jpg",
+          "thumbnail": "/uploads/technicians/adong/thumbnails/thumb_1751290231249_f15d85edee77a839b4a3c3289a75ab8d_.jpg",
+          "description": "阿东的照片",
+          "sortOrder": 9
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/adong/1751290315468_adong 1.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "阿东的视频",
+          "sortOrder": 6
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/adong/1751290317302_adong 2.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "阿东的视频",
+          "sortOrder": 7
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/adong/1751290317998_adong 3.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "阿东的视频",
+          "sortOrder": 8
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/adong/1751290319432_adong 4.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "阿东的视频",
+          "sortOrder": 9
+        }
+      ],
+      "id": "mcj4zrltclzqmno3iwj",
+      "createdAt": "2025-06-30T13:30:42.690Z",
+      "updatedAt": "2025-06-30T13:32:25.722Z"
+    },
+    {
+      "nickname": "阿杰",
+      "age": 25,
+      "height": 180,
+      "weight": 70,
+      "features": "圈内，全能，退伍军人，游泳教练，只接上🚪",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "南京市",
+      "latitude": 32.064652120624025,
+      "longitude": 118.8024218110764,
+      "area": "南京市",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/ajie/1751291603471_4ef526f721b5ce937fc2c1329f43f54d.jpg",
+          "thumbnail": "/uploads/technicians/ajie/thumbnails/thumb_1751291603471_4ef526f721b5ce937fc2c1329f43f54d.jpg",
+          "description": "阿杰的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/ajie/1751291603826_541c2315167f08a1ba2e5586ab34bd7e.jpg",
+          "thumbnail": "/uploads/technicians/ajie/thumbnails/thumb_1751291603826_541c2315167f08a1ba2e5586ab34bd7e.jpg",
+          "description": "阿杰的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/ajie/1751291604219_716e150c93b6d8e7191269b8be912f21.jpg",
+          "thumbnail": "/uploads/technicians/ajie/thumbnails/thumb_1751291604219_716e150c93b6d8e7191269b8be912f21.jpg",
+          "description": "阿杰的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/ajie/1751291604450_a748fd6f45bec387d1f17ab1a92a177d.jpg",
+          "thumbnail": "/uploads/technicians/ajie/thumbnails/thumb_1751291604450_a748fd6f45bec387d1f17ab1a92a177d.jpg",
+          "description": "阿杰的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/ajie/1751291604831_e67e5d4353e5107968bc6e81d0542751.jpg",
+          "thumbnail": "/uploads/technicians/ajie/thumbnails/thumb_1751291604831_e67e5d4353e5107968bc6e81d0542751.jpg",
+          "description": "阿杰的照片",
+          "sortOrder": 5
+        }
+      ],
+      "id": "mcj5t1lc044nomebd67g",
+      "createdAt": "2025-06-30T13:53:28.656Z",
+      "updatedAt": "2025-06-30T13:53:28.656Z"
+    },
+    {
+      "nickname": "大成子",
+      "age": 26,
+      "height": 182,
+      "weight": 70,
+      "features": "牌19，双，全能，调琴高手，S，粗口，调教，桩机",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "城开大厦-2幢",
+      "latitude": 32.04034758844531,
+      "longitude": 118.79244864364352,
+      "area": "南京市秦淮区洪武路198号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dachengzi/1751292933595_1c0f6f31fd4f1b1c382aecf28217ff7c_.jpg",
+          "thumbnail": "/uploads/technicians/dachengzi/thumbnails/thumb_1751292933595_1c0f6f31fd4f1b1c382aecf28217ff7c_.jpg",
+          "description": "大成子的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dachengzi/1751292933918_2245a8e245ba9295e1bbaa5073bb7722_.jpg",
+          "thumbnail": "/uploads/technicians/dachengzi/thumbnails/thumb_1751292933918_2245a8e245ba9295e1bbaa5073bb7722_.jpg",
+          "description": "大成子的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dachengzi/1751292934235_bfb715053a8c556052fce860f0ca9e55_.jpg",
+          "thumbnail": "/uploads/technicians/dachengzi/thumbnails/thumb_1751292934235_bfb715053a8c556052fce860f0ca9e55_.jpg",
+          "description": "大成子的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dachengzi/1751292934410_f5de6690a7abe817f259838f903bd2db_.jpg",
+          "thumbnail": "/uploads/technicians/dachengzi/thumbnails/thumb_1751292934410_f5de6690a7abe817f259838f903bd2db_.jpg",
+          "description": "大成子的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dachengzi/1751292934892_f5547936c053e7897a40281bb31748c3_.jpg",
+          "thumbnail": "/uploads/technicians/dachengzi/thumbnails/thumb_1751292934892_f5547936c053e7897a40281bb31748c3_.jpg",
+          "description": "大成子的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/dachengzi/1751292939814_dachengzi 1.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "大成子的视频",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mcj6lpbvrdbeso4ln7s",
+      "createdAt": "2025-06-30T14:15:45.787Z",
+      "updatedAt": "2025-06-30T14:15:45.787Z"
+    },
+    {
+      "nickname": "小康",
+      "age": 23,
+      "height": 180,
+      "weight": 64,
+      "features": "牌18，圈内，全能，退役小哥，肌肉明显",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "汉庭优佳酒店(苏州观前街乐桥地铁站店)",
+      "latitude": 31.314084758265817,
+      "longitude": 120.62883411632583,
+      "area": "江苏省苏州市姑苏区人民路1264号",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaokang/1751294917793_2e1ecaa94e0c07fcb27231e6e82d43bc.jpg",
+          "thumbnail": "/uploads/technicians/xiaokang/thumbnails/thumb_1751294917793_2e1ecaa94e0c07fcb27231e6e82d43bc.jpg",
+          "description": "小康的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaokang/1751294918324_2f812af32a00ea3c383c2fd679724ab1.jpg",
+          "thumbnail": "/uploads/technicians/xiaokang/thumbnails/thumb_1751294918324_2f812af32a00ea3c383c2fd679724ab1.jpg",
+          "description": "小康的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaokang/1751294918855_7bbc9039b27aed50e9a4b9ade7c0d4f8.jpg",
+          "thumbnail": "/uploads/technicians/xiaokang/thumbnails/thumb_1751294918855_7bbc9039b27aed50e9a4b9ade7c0d4f8.jpg",
+          "description": "小康的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaokang/1751294919219_acfacee32dc582188e64ca4b05ebf543.jpg",
+          "thumbnail": "/uploads/technicians/xiaokang/thumbnails/thumb_1751294919219_acfacee32dc582188e64ca4b05ebf543.jpg",
+          "description": "小康的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaokang/1751294924012_f9de2131cfb510d8a30265211db474bf.jpg",
+          "thumbnail": "/uploads/technicians/xiaokang/thumbnails/thumb_1751294924012_f9de2131cfb510d8a30265211db474bf.jpg",
+          "description": "小康的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaokang/1751294930693_b486d406b437faccb707450ee560b429.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小康的视频",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mcj7sfm5x8b1zlmrnt",
+      "createdAt": "2025-06-30T14:48:59.405Z",
+      "updatedAt": "2025-06-30T14:48:59.405Z"
+    },
+    {
+      "nickname": "大凯",
+      "age": 23,
+      "height": 180,
+      "weight": 65,
+      "features": "牌18，圈内，全能",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "小火瓦巷1号商务楼",
+      "latitude": 32.038631382432385,
+      "longitude": 118.79804014629039,
+      "area": "南京市秦淮区太平南路330号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dakai/1751295993816_8ab6b10c2a1f02766c65a8e549950ac7_.jpg",
+          "thumbnail": "/uploads/technicians/dakai/thumbnails/thumb_1751295993816_8ab6b10c2a1f02766c65a8e549950ac7_.jpg",
+          "description": "大凯的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dakai/1751295995217_11e320855e82873ed7c9b5d0eb4006e1_.jpg",
+          "thumbnail": "/uploads/technicians/dakai/thumbnails/thumb_1751295995217_11e320855e82873ed7c9b5d0eb4006e1_.jpg",
+          "description": "大凯的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dakai/1751295996562_4638f01d0fa23a9205dd64d3ca8b1562_.jpg",
+          "thumbnail": "/uploads/technicians/dakai/thumbnails/thumb_1751295996562_4638f01d0fa23a9205dd64d3ca8b1562_.jpg",
+          "description": "大凯的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dakai/1751295997302_dacfacaf42d4e4bf020f9595484ea086_.jpg",
+          "thumbnail": "/uploads/technicians/dakai/thumbnails/thumb_1751295997302_dacfacaf42d4e4bf020f9595484ea086_.jpg",
+          "description": "大凯的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dakai/1751295998211_ea34cce0849dd1dd6ed52b44c94c1c70_.jpg",
+          "thumbnail": "/uploads/technicians/dakai/thumbnails/thumb_1751295998211_ea34cce0849dd1dd6ed52b44c94c1c70_.jpg",
+          "description": "大凯的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/dakai/1751296005217_44686bd2b0740d7f1847040782b6cfe9_4.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "大凯的视频",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mcj8fcls1q3zh2g0gny",
+      "createdAt": "2025-06-30T15:06:48.592Z",
+      "updatedAt": "2025-06-30T15:06:48.592Z"
+    },
+    {
+      "nickname": "大雄",
+      "age": 26,
+      "height": 178,
+      "weight": 75,
+      "features": "牌16，直男，全能，手法专业，抓龙筋，调琴高手，S",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "城开大厦-2幢",
+      "latitude": 32.04034758844531,
+      "longitude": 118.79244864364352,
+      "area": "南京市秦淮区洪武路198号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/daxiong/1751296837164_a6c3c452383525ee580b2be50d3f1815_.jpg",
+          "thumbnail": "/uploads/technicians/daxiong/thumbnails/thumb_1751296837164_a6c3c452383525ee580b2be50d3f1815_.jpg",
+          "description": "大雄的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/daxiong/1751296898804_7a31482a4f7e4b42d5b23b5dcdc04bd9_.jpg",
+          "thumbnail": "/uploads/technicians/daxiong/thumbnails/thumb_1751296898804_7a31482a4f7e4b42d5b23b5dcdc04bd9_.jpg",
+          "description": "大雄的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/daxiong/1751296900244_ed5163bd628c5f20bbbf47c2a685e355_.jpg",
+          "thumbnail": "/uploads/technicians/daxiong/thumbnails/thumb_1751296900244_ed5163bd628c5f20bbbf47c2a685e355_.jpg",
+          "description": "大雄的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/daxiong/1751296906330_daxiong 1.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "大雄的视频",
+          "sortOrder": 4
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/daxiong/1751296909072_daxiong 2.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "大雄的视频",
+          "sortOrder": 5
+        }
+      ],
+      "id": "mcj8yp3oq4eo85eg5bq",
+      "createdAt": "2025-06-30T15:21:51.252Z",
+      "updatedAt": "2025-06-30T15:21:51.252Z"
+    },
+    {
+      "nickname": "豆包",
+      "age": 23,
+      "height": 180,
+      "weight": 75,
+      "features": "牌15，圈内，全能，江苏帅哥，手法专业",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "天之都大厦",
+      "latitude": 32.04154167463249,
+      "longitude": 118.79487424818157,
+      "area": "江苏省南京市秦淮区户部街33号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/doubao/1751297010140_2f8a21a72c2155002b41283dec6fc42e.jpg",
+          "thumbnail": "/uploads/technicians/doubao/thumbnails/thumb_1751297010140_2f8a21a72c2155002b41283dec6fc42e.jpg",
+          "description": "豆包的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/doubao/1751297010611_05db1af66d95806daca8c98f9dc429cb.jpg",
+          "thumbnail": "/uploads/technicians/doubao/thumbnails/thumb_1751297010611_05db1af66d95806daca8c98f9dc429cb.jpg",
+          "description": "豆包的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/doubao/1751297010891_38e3444bfca75fe422c4881215065049.jpg",
+          "thumbnail": "/uploads/technicians/doubao/thumbnails/thumb_1751297010891_38e3444bfca75fe422c4881215065049.jpg",
+          "description": "豆包的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/doubao/1751297011287_703a9edbfd9bed3409e7c57b84f8117c.jpg",
+          "thumbnail": "/uploads/technicians/doubao/thumbnails/thumb_1751297011287_703a9edbfd9bed3409e7c57b84f8117c.jpg",
+          "description": "豆包的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/doubao/1751297013426_1749461727016.png",
+          "thumbnail": "/uploads/technicians/doubao/thumbnails/thumb_1751297013426_1749461727016.png",
+          "description": "豆包的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/doubao/1751297013821_c377d1c278b63e656c7bc844c7bed73b.jpg",
+          "thumbnail": "/uploads/technicians/doubao/thumbnails/thumb_1751297013821_c377d1c278b63e656c7bc844c7bed73b.jpg",
+          "description": "豆包的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/doubao/1751297019901_doubao 1 .mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "豆包的视频",
+          "sortOrder": 7
+        }
+      ],
+      "id": "mcj913qo366bars2s52",
+      "createdAt": "2025-06-30T15:23:43.536Z",
+      "updatedAt": "2025-06-30T15:23:43.536Z"
+    },
+    {
+      "nickname": "晓东",
+      "age": 26,
+      "height": 176,
+      "weight": 64,
+      "features": "牌20，圈内，全能，粗大，调琴高手，专业手法",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "天丰大厦",
+      "latitude": 32.04670716921362,
+      "longitude": 118.79375540866889,
+      "area": "南京市秦淮洪武路26号（新街口地铁站24号口步行280米）",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaodong/1751297113694_28edbc8bbb97615a23191d9299b82d6e_.jpg",
+          "thumbnail": "/uploads/technicians/xiaodong/thumbnails/thumb_1751297113694_28edbc8bbb97615a23191d9299b82d6e_.jpg",
+          "description": "晓东的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaodong/1751297114089_31543c18ae47b330cc841f37edb04f35_.jpg",
+          "thumbnail": "/uploads/technicians/xiaodong/thumbnails/thumb_1751297114089_31543c18ae47b330cc841f37edb04f35_.jpg",
+          "description": "晓东的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaodong/1751297114403_384796c6a9db15a804eb5387a570af12_.jpg",
+          "thumbnail": "/uploads/technicians/xiaodong/thumbnails/thumb_1751297114403_384796c6a9db15a804eb5387a570af12_.jpg",
+          "description": "晓东的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaodong/1751297114653_b1f2d239af297848f457c572b815181e_.jpg",
+          "thumbnail": "/uploads/technicians/xiaodong/thumbnails/thumb_1751297114653_b1f2d239af297848f457c572b815181e_.jpg",
+          "description": "晓东的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaodong/1751297114906_dbab12939de66e9870df80136e3f6e54_.jpg",
+          "thumbnail": "/uploads/technicians/xiaodong/thumbnails/thumb_1751297114906_dbab12939de66e9870df80136e3f6e54_.jpg",
+          "description": "晓东的照片",
+          "sortOrder": 5
+        }
+      ],
+      "id": "mcj934ji5f57ctclr4x",
+      "createdAt": "2025-06-30T15:25:17.886Z",
+      "updatedAt": "2025-06-30T15:25:17.886Z"
+    },
+    {
+      "nickname": "胡骏",
+      "age": 29,
+      "height": 179,
+      "weight": 69,
+      "features": "牌17，圈内，纯1，山东威海人",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "江苏饭店",
+      "latitude": 32.038325984957964,
+      "longitude": 118.79893584671437,
+      "area": "江苏省南京市秦淮区太平南路305号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hujun/1751297233369_23ac3a5ec8b4a74bf549fbae9a200168_.jpg",
+          "thumbnail": "/uploads/technicians/hujun/thumbnails/thumb_1751297233369_23ac3a5ec8b4a74bf549fbae9a200168_.jpg",
+          "description": "胡骏的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hujun/1751297233601_b484035c19f4c1eae6973cf38af265f9_.jpg",
+          "thumbnail": "/uploads/technicians/hujun/thumbnails/thumb_1751297233601_b484035c19f4c1eae6973cf38af265f9_.jpg",
+          "description": "胡骏的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hujun/1751297233784_d0a22d55e8c118ca8b10f98e265468c0_.jpg",
+          "thumbnail": "/uploads/technicians/hujun/thumbnails/thumb_1751297233784_d0a22d55e8c118ca8b10f98e265468c0_.jpg",
+          "description": "胡骏的照片",
+          "sortOrder": 3
+        }
+      ],
+      "id": "mcj95o632ifa7aj7qjy",
+      "createdAt": "2025-06-30T15:27:16.635Z",
+      "updatedAt": "2025-06-30T15:27:16.635Z"
+    },
+    {
+      "nickname": "帽子",
+      "age": 18,
+      "height": 175,
+      "weight": 55,
+      "features": "牌18.直男，纯1，接受被👄，河南人，调琴高手",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "龙湖紫都城(南京市-鼓楼区)",
+      "latitude": 32.0991428221244,
+      "longitude": 118.78499809774378,
+      "area": "玉宁路16号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/maozi/1751297360034_0b7de237c10465b8f580c282025c84ea_.jpg",
+          "thumbnail": "/uploads/technicians/maozi/thumbnails/thumb_1751297360034_0b7de237c10465b8f580c282025c84ea_.jpg",
+          "description": "帽子的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/maozi/1751297360596_6ed1066385e91cf64509995604dd1489_.jpg",
+          "thumbnail": "/uploads/technicians/maozi/thumbnails/thumb_1751297360596_6ed1066385e91cf64509995604dd1489_.jpg",
+          "description": "帽子的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/maozi/1751297360834_c671307c20ea1482c88b6806543caccd_.jpg",
+          "thumbnail": "/uploads/technicians/maozi/thumbnails/thumb_1751297360834_c671307c20ea1482c88b6806543caccd_.jpg",
+          "description": "帽子的照片",
+          "sortOrder": 3
+        }
+      ],
+      "id": "mcj98elehyytchkenew",
+      "createdAt": "2025-06-30T15:29:24.194Z",
+      "updatedAt": "2025-06-30T15:29:24.194Z"
+    },
+    {
+      "nickname": "小峰",
+      "age": 26,
+      "height": 182,
+      "weight": 72,
+      "features": "牌17.圈内，全能，江苏常州，手法专业",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "城开大厦-2幢",
+      "latitude": 32.04034758844531,
+      "longitude": 118.79244864364352,
+      "area": "南京市秦淮区洪武路198号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaofeng/1751297432293_55ce948f8050a814455dc941819fb49c.jpg",
+          "thumbnail": "/uploads/technicians/xiaofeng/thumbnails/thumb_1751297432293_55ce948f8050a814455dc941819fb49c.jpg",
+          "description": "小峰的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaofeng/1751297432796_67fa1df8854d16a17861d4b27d0a49ff.jpg",
+          "thumbnail": "/uploads/technicians/xiaofeng/thumbnails/thumb_1751297432796_67fa1df8854d16a17861d4b27d0a49ff.jpg",
+          "description": "小峰的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaofeng/1751297433229_220ba032c3b1ad0518ba4167fb6df297.jpg",
+          "thumbnail": "/uploads/technicians/xiaofeng/thumbnails/thumb_1751297433229_220ba032c3b1ad0518ba4167fb6df297.jpg",
+          "description": "小峰的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaofeng/1751297433617_e6cf3ebbbec5cbd3da47014c6491e116.jpg",
+          "thumbnail": "/uploads/technicians/xiaofeng/thumbnails/thumb_1751297433617_e6cf3ebbbec5cbd3da47014c6491e116.jpg",
+          "description": "小峰的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaofeng/1751297439876_xiaofeng 1.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小峰的视频",
+          "sortOrder": 5
+        }
+      ],
+      "id": "mcj9a55ti2qe6jayqqq",
+      "createdAt": "2025-06-30T15:30:45.281Z",
+      "updatedAt": "2025-06-30T15:30:45.281Z"
+    },
+    {
+      "nickname": "小沐",
+      "age": 20,
+      "height": 181,
+      "weight": 67,
+      "features": "牌16，圈内，全能，东北人，S，只接上🚪",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "南京市",
+      "latitude": 32.064652120624025,
+      "longitude": 118.8024218110764,
+      "area": "南京市",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaomu/1751297616787_3e904531cbe7bc1ad2aebbafeb39daf7_.jpg",
+          "thumbnail": "/uploads/technicians/xiaomu/thumbnails/thumb_1751297616787_3e904531cbe7bc1ad2aebbafeb39daf7_.jpg",
+          "description": "小沐的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaomu/1751297617142_7e24927a419aa62fed81bc9c83d70780_.jpg",
+          "thumbnail": "/uploads/technicians/xiaomu/thumbnails/thumb_1751297617142_7e24927a419aa62fed81bc9c83d70780_.jpg",
+          "description": "小沐的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaomu/1751297618114_064e19cbde59a23f409c2f5e8f8fb2be_.jpg",
+          "thumbnail": "/uploads/technicians/xiaomu/thumbnails/thumb_1751297618114_064e19cbde59a23f409c2f5e8f8fb2be_.jpg",
+          "description": "小沐的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaomu/1751297618425_98f74ea54a0ac203733aac04c7877191_.jpg",
+          "thumbnail": "/uploads/technicians/xiaomu/thumbnails/thumb_1751297618425_98f74ea54a0ac203733aac04c7877191_.jpg",
+          "description": "小沐的照片",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcj9dwo6dvuak0g6b2i",
+      "createdAt": "2025-06-30T15:33:40.902Z",
+      "updatedAt": "2025-06-30T15:33:40.902Z"
+    },
+    {
+      "nickname": "大龙",
+      "age": 20,
+      "height": 179,
+      "weight": 63,
+      "features": "牌18，直男，全能，内蒙人，阳光时尚痞帅大男孩，可狼可奶",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "龙湖紫都城(南京市-鼓楼区)",
+      "latitude": 32.0991428221244,
+      "longitude": 118.78499809774378,
+      "area": "玉宁路16号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dalong/1751297675672_2e98f6fc761932c155b24d2ebb0613f2.jpg",
+          "thumbnail": "/uploads/technicians/dalong/thumbnails/thumb_1751297675672_2e98f6fc761932c155b24d2ebb0613f2.jpg",
+          "description": "大龙的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dalong/1751297676140_129000f7b39a18940f1ff1f5fd9fbfed.jpg",
+          "thumbnail": "/uploads/technicians/dalong/thumbnails/thumb_1751297676140_129000f7b39a18940f1ff1f5fd9fbfed.jpg",
+          "description": "大龙的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dalong/1751297677911_b3df33ce1b3649e2fb9451d19b4ca0c1.jpg",
+          "thumbnail": "/uploads/technicians/dalong/thumbnails/thumb_1751297677911_b3df33ce1b3649e2fb9451d19b4ca0c1.jpg",
+          "description": "大龙的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/dalong/1751297686561_dalong 1.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "大龙的视频",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcj9fd2pradh6tuvkae",
+      "createdAt": "2025-06-30T15:34:48.817Z",
+      "updatedAt": "2025-06-30T15:34:53.970Z"
+    },
+    {
+      "nickname": "小正",
+      "age": 27,
+      "height": 182,
+      "weight": 78,
+      "features": "牌16.5，直男，山东人，服务好",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "南京万达广场-万达中心",
+      "latitude": 32.03561592948362,
+      "longitude": 118.7442256275958,
+      "area": "江东中路110号",
+      "cities": [
+        "nanjing"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaozheng/1751297760140_2a9ebd16c085518ba30d9d3c30aec898_.jpg",
+          "thumbnail": "/uploads/technicians/xiaozheng/thumbnails/thumb_1751297760140_2a9ebd16c085518ba30d9d3c30aec898_.jpg",
+          "description": "小正的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaozheng/1751297760275_987da9f70754e7639edf7f469aa63814.jpg",
+          "thumbnail": "/uploads/technicians/xiaozheng/thumbnails/thumb_1751297760275_987da9f70754e7639edf7f469aa63814.jpg",
+          "description": "小正的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaozheng/1751297760399_3130eff6dc9ce8a47b785ed39f0b3899.jpg",
+          "thumbnail": "/uploads/technicians/xiaozheng/thumbnails/thumb_1751297760399_3130eff6dc9ce8a47b785ed39f0b3899.jpg",
+          "description": "小正的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaozheng/1751297760953_aee2e269214f711c00eb9862de1ec7b1_.jpg",
+          "thumbnail": "/uploads/technicians/xiaozheng/thumbnails/thumb_1751297760953_aee2e269214f711c00eb9862de1ec7b1_.jpg",
+          "description": "小正的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaozheng/1751297761359_d8fe19e6dcc9c01f261681fba23b622e_.jpg",
+          "thumbnail": "/uploads/technicians/xiaozheng/thumbnails/thumb_1751297761359_d8fe19e6dcc9c01f261681fba23b622e_.jpg",
+          "description": "小正的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaozheng/1751297767018_xiaozheng 1.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小正的视频",
+          "sortOrder": 6
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaozheng/1751297768533_xiaozheng 2.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小正的视频",
+          "sortOrder": 7
+        }
+      ],
+      "id": "mcj9h4fdubfvolv2llq",
+      "createdAt": "2025-06-30T15:36:10.921Z",
+      "updatedAt": "2025-06-30T15:36:10.921Z"
+    },
+    {
+      "nickname": "小郑",
+      "age": 21,
+      "height": 183,
+      "weight": 65,
+      "features": "牌16，圈内，全能，艺术生，可狼可奶 白皮 薄肌体育生 \n服务一流 阳光开朗❗❗",
+      "isNew": true,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "阳光城平江悦-9栋",
+      "latitude": 31.34810271358754,
+      "longitude": 120.61459103331237,
+      "area": "江苏省苏州市姑苏区江坤路与莲升路交叉口正南方向70米左右",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaozheng/1751297864495_d7167a469d884a01553158e98c417371.jpg",
+          "thumbnail": "/uploads/technicians/xiaozheng/thumbnails/thumb_1751297864495_d7167a469d884a01553158e98c417371.jpg",
+          "description": "小郑的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaozheng/1751297864712_ec9e00ff258537d23f821e13a2ef10a2.jpg",
+          "thumbnail": "/uploads/technicians/xiaozheng/thumbnails/thumb_1751297864712_ec9e00ff258537d23f821e13a2ef10a2.jpg",
+          "description": "小郑的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaozheng/1751297880566_5b37e97f2d507e0f4e506031a32a3c02.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小郑的视频",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaozheng/1751297883091_581e7ca0aa19014d44c9b4fb85a958b0.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小郑的视频",
+          "sortOrder": 4
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaozheng/1751297889874_d833db4f5350203227d17edf845d5936.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小郑的视频",
+          "sortOrder": 5
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaozheng/1751297892851_fd0d673267fa3bcd10b5f1275a2663b7.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小郑的视频",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mcj9jv6wxuvh8qb0akn",
+      "createdAt": "2025-06-30T15:38:18.920Z",
+      "updatedAt": "2025-06-30T15:38:18.920Z"
+    },
+    {
+      "nickname": "维维",
+      "age": 21,
+      "height": 180,
+      "weight": 55,
+      "features": "牌16，圈内，全能，西安人，调琴高手",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "星韵花园-南组团",
+      "latitude": 31.283090617016097,
+      "longitude": 120.57678126456685,
+      "area": "江苏省苏州市虎丘区横山路35号3附近",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297955743_03f9d48cd1002b0985f76eff125b4072.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297955743_03f9d48cd1002b0985f76eff125b4072.jpg",
+          "description": "维维的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297956462_68a79c2ef6f99fbf73c306ff087b72d4.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297956462_68a79c2ef6f99fbf73c306ff087b72d4.jpg",
+          "description": "维维的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297956905_1568e244d395207f3ce0568841839c5e.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297956905_1568e244d395207f3ce0568841839c5e.jpg",
+          "description": "维维的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297957679_3241b122b4d90856c7a6443d1073d3e7.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297957679_3241b122b4d90856c7a6443d1073d3e7.jpg",
+          "description": "维维的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297958330_9518d067dd7ae8281c6ef5f3cab0116a.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297958330_9518d067dd7ae8281c6ef5f3cab0116a.jpg",
+          "description": "维维的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297958739_569619ac1ba5fc8141a04eef73a6d810.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297958739_569619ac1ba5fc8141a04eef73a6d810.jpg",
+          "description": "维维的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297959299_77103207ae45e6c30d02b5fb1705bbce.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297959299_77103207ae45e6c30d02b5fb1705bbce.jpg",
+          "description": "维维的照片",
+          "sortOrder": 7
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297959788_af72f436ed0bcb0255579e50b93ccf37.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297959788_af72f436ed0bcb0255579e50b93ccf37.jpg",
+          "description": "维维的照片",
+          "sortOrder": 8
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297960157_bd16a3411393593dacef0d2b17497467.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297960157_bd16a3411393593dacef0d2b17497467.jpg",
+          "description": "维维的照片",
+          "sortOrder": 9
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297977710_ca848136717a8bb4921107fa012a9ac5.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297977710_ca848136717a8bb4921107fa012a9ac5.jpg",
+          "description": "维维的照片",
+          "sortOrder": 10
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297978203_cde5628041d3bdfce1ea6d2ed6b07729.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297978203_cde5628041d3bdfce1ea6d2ed6b07729.jpg",
+          "description": "维维的照片",
+          "sortOrder": 11
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297979068_db07fa3c8198961bdb77eb905ac8e8fe.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297979068_db07fa3c8198961bdb77eb905ac8e8fe.jpg",
+          "description": "维维的照片",
+          "sortOrder": 12
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/weiwei/1751297979449_f62ac38151f2642adecc52e7eaba5572.jpg",
+          "thumbnail": "/uploads/technicians/weiwei/thumbnails/thumb_1751297979449_f62ac38151f2642adecc52e7eaba5572.jpg",
+          "description": "维维的照片",
+          "sortOrder": 13
+        }
+      ],
+      "id": "mcj9lrjfnxup3s58gc",
+      "createdAt": "2025-06-30T15:39:47.499Z",
+      "updatedAt": "2025-06-30T15:39:47.499Z"
+    },
+    {
+      "nickname": "小帅",
+      "age": 22,
+      "height": 175,
+      "weight": 55,
+      "features": "牌17，圈内，全能，阳光清秀，可狼可奶，热情主动",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "满庭酒店(苏州团结桥地铁站店)",
+      "latitude": 31.284056868478313,
+      "longitude": 120.63212532805329,
+      "area": "东吴北路221号（沃尔玛超市对面）",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoshuai/1751298066480_5845b1172dbc6dcc38aa211bfced7c1d.jpg",
+          "thumbnail": "/uploads/technicians/xiaoshuai/thumbnails/thumb_1751298066480_5845b1172dbc6dcc38aa211bfced7c1d.jpg",
+          "description": "小帅的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoshuai/1751298066695_a1eb240564843888d3c9f67a34bc79c4.jpg",
+          "thumbnail": "/uploads/technicians/xiaoshuai/thumbnails/thumb_1751298066695_a1eb240564843888d3c9f67a34bc79c4.jpg",
+          "description": "小帅的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoshuai/1751298067210_b517600bc25ff35d0a3383108541d8a4.jpg",
+          "thumbnail": "/uploads/technicians/xiaoshuai/thumbnails/thumb_1751298067210_b517600bc25ff35d0a3383108541d8a4.jpg",
+          "description": "小帅的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xiaoshuai/1751298072275_d6d8836084659cd03c32d5ee29547450.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "小帅的视频",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcj9no3kbq05nvnbvts",
+      "createdAt": "2025-06-30T15:41:16.352Z",
+      "updatedAt": "2025-06-30T15:41:16.352Z"
+    },
+    {
+      "nickname": "逸权",
+      "age": 23,
+      "height": 184,
+      "weight": 70,
+      "features": "牌16，直男，鞋码45，阳光帅气，身材匀称，手法专业，服务一流",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "布丁酒店(苏州人民路观前察院场地铁站店)",
+      "latitude": 31.316139932480432,
+      "longitude": 120.6276385615226,
+      "area": "观前街西人民路1359号",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298130523_4db18e46d216a7abd389f7eae7c8ed8f.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298130523_4db18e46d216a7abd389f7eae7c8ed8f.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298131244_6b63988eb7250858d8680055c455674e.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298131244_6b63988eb7250858d8680055c455674e.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298132026_122e34e8502eb209c12c10c03db0f7e3.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298132026_122e34e8502eb209c12c10c03db0f7e3.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298132515_4849b15a1e135cbe939e4a7fa0169511.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298132515_4849b15a1e135cbe939e4a7fa0169511.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298133038_8363ec2f2aca924cf0adceb41f1a2eb4.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298133038_8363ec2f2aca924cf0adceb41f1a2eb4.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298133637_203766f9172009c4d6ce5066a7efe993.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298133637_203766f9172009c4d6ce5066a7efe993.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298134314_a178dacd6b859a50e10175bc8cd61aeb.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298134314_a178dacd6b859a50e10175bc8cd61aeb.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 7
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298134761_d0b50bdd2462ff3b93a012a4fda1cdda.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298134761_d0b50bdd2462ff3b93a012a4fda1cdda.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 8
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298135378_d99a6a430c1a55cf7edbba85b4c91530.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298135378_d99a6a430c1a55cf7edbba85b4c91530.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 9
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yiquan/1751298135786_fc15cf1faab2bdf656c6eceac80e15ae.jpg",
+          "thumbnail": "/uploads/technicians/yiquan/thumbnails/thumb_1751298135786_fc15cf1faab2bdf656c6eceac80e15ae.jpg",
+          "description": "逸权的照片",
+          "sortOrder": 10
+        }
+      ],
+      "id": "mcj9p1bqr7dzue1page",
+      "createdAt": "2025-06-30T15:42:20.150Z",
+      "updatedAt": "2025-06-30T15:42:20.150Z"
+    },
+    {
+      "nickname": "鹿洋",
+      "age": 24,
+      "height": 176,
+      "weight": 56,
+      "features": "牌16，0.5，鞋码40，无毛，薄肌身材，手法专业，服务态度佳",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "漫美酒店(苏州观前街平江路店)",
+      "latitude": 31.31756118232085,
+      "longitude": 120.63065318498353,
+      "area": "苏州市姑苏区施相公弄苏哥利酒店东南侧约40米",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298230402_9e34de43293b92836b3f78c5616fccd9.jpg",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298230402_9e34de43293b92836b3f78c5616fccd9.jpg",
+          "description": "鹿洋的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298230770_1750658940264.png",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298230770_1750658940264.png",
+          "description": "鹿洋的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298231163_1750658950789.png",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298231163_1750658950789.png",
+          "description": "鹿洋的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298231568_1750658967671.png",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298231568_1750658967671.png",
+          "description": "鹿洋的照片",
+          "sortOrder": 6
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298231999_1750658975747.png",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298231999_1750658975747.png",
+          "description": "鹿洋的照片",
+          "sortOrder": 7
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298232367_1750658985030.png",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298232367_1750658985030.png",
+          "description": "鹿洋的照片",
+          "sortOrder": 8
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298232773_1750658993988.png",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298232773_1750658993988.png",
+          "description": "鹿洋的照片",
+          "sortOrder": 9
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298233155_1750659004582.png",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298233155_1750659004582.png",
+          "description": "鹿洋的照片",
+          "sortOrder": 10
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/luyang/1751298233482_ecbe53f9a68f1a45df7f854c9a848fd2.jpg",
+          "thumbnail": "/uploads/technicians/luyang/thumbnails/thumb_1751298233482_ecbe53f9a68f1a45df7f854c9a848fd2.jpg",
+          "description": "鹿洋的照片",
+          "sortOrder": 11
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/luyang/1751298258121_4a8ef1d24bed4e52b795ebcd12d57db7.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "鹿洋的视频",
+          "sortOrder": 10
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/luyang/1751298260421_6fe72e21aac720e44d575e8c30029e9e.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "鹿洋的视频",
+          "sortOrder": 11
+        }
+      ],
+      "id": "mcj9rqlrpknnzd0xti8",
+      "createdAt": "2025-06-30T15:44:26.223Z",
+      "updatedAt": "2025-06-30T15:44:26.223Z"
+    },
+    {
+      "nickname": "星月",
+      "age": 22,
+      "height": 179,
+      "weight": 66,
+      "features": "牌17，圈内，全能，身材一绝，不接项目一",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "蘇舍汉服电竞酒店",
+      "latitude": 31.315555245540647,
+      "longitude": 120.63862591587623,
+      "area": "江苏省苏州市姑苏区建新巷14号",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xingyue/1751298366948_3d1bac83a63452289069e061e02978af_.jpg",
+          "thumbnail": "/uploads/technicians/xingyue/thumbnails/thumb_1751298366948_3d1bac83a63452289069e061e02978af_.jpg",
+          "description": "星月的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xingyue/1751298367494_140a6193f575f26fb73310ec268b2056_.jpg",
+          "thumbnail": "/uploads/technicians/xingyue/thumbnails/thumb_1751298367494_140a6193f575f26fb73310ec268b2056_.jpg",
+          "description": "星月的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xingyue/1751298380320_dd07133973999dec6098d1833a1d9d05_4.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "星月的视频",
+          "sortOrder": 3
+        }
+      ],
+      "id": "mcj9u8d6xgb4aiqjkfr",
+      "createdAt": "2025-06-30T15:46:22.554Z",
+      "updatedAt": "2025-06-30T15:46:22.554Z"
+    },
+    {
+      "nickname": "颜一",
+      "age": 23,
+      "height": 180,
+      "weight": 75,
+      "features": "牌17，圈内，全能，安徽人，翘臀，肌肉男",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "铂金公寓-南门",
+      "latitude": 31.32139878801813,
+      "longitude": 120.67180860277041,
+      "area": "江苏省苏州市苏州工业园区苏雅路388号",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yanyi/1751298487436_9cc9e8a5a46568feefd49be7ad637a31.jpg",
+          "thumbnail": "/uploads/technicians/yanyi/thumbnails/thumb_1751298487436_9cc9e8a5a46568feefd49be7ad637a31.jpg",
+          "description": "颜一的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yanyi/1751298489154_41e9e355328cb2c5dd1f3f7c7046d700_.png",
+          "thumbnail": "/uploads/technicians/yanyi/thumbnails/thumb_1751298489154_41e9e355328cb2c5dd1f3f7c7046d700_.png",
+          "description": "颜一的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yanyi/1751298489451_cccfec92c8568f1ee8b9fea034a3b08c.jpg",
+          "thumbnail": "/uploads/technicians/yanyi/thumbnails/thumb_1751298489451_cccfec92c8568f1ee8b9fea034a3b08c.jpg",
+          "description": "颜一的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/yanyi/1751298491307_ed1cde8dcbb6dd37f121720777a8f815_.png",
+          "thumbnail": "/uploads/technicians/yanyi/thumbnails/thumb_1751298491307_ed1cde8dcbb6dd37f121720777a8f815_.png",
+          "description": "颜一的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/yanyi/1751298496827_7678f28354fd8cdd40c776f4f58cb28d_4.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "颜一的视频",
+          "sortOrder": 5
+        }
+      ],
+      "id": "mcj9wrb2gh8ussgeqh",
+      "createdAt": "2025-06-30T15:48:20.414Z",
+      "updatedAt": "2025-06-30T15:48:20.414Z"
+    },
+    {
+      "nickname": "旭东",
+      "age": 26,
+      "height": 173,
+      "weight": 65,
+      "features": "牌15，双，全能，安徽人，手法专业，身材匀称",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "都市花园",
+      "latitude": 31.324190284705896,
+      "longitude": 120.67195376894082,
+      "area": "苏州市吴中区星海街519号",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xudong/1751298554320_2abaa2d5e77b5fb0e1189378bf882ec8_.jpg",
+          "thumbnail": "/uploads/technicians/xudong/thumbnails/thumb_1751298554320_2abaa2d5e77b5fb0e1189378bf882ec8_.jpg",
+          "description": "旭东的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xudong/1751298556173_37dd659caf04e7dba01a3f21cc8b0ce4_.jpg",
+          "thumbnail": "/uploads/technicians/xudong/thumbnails/thumb_1751298556173_37dd659caf04e7dba01a3f21cc8b0ce4_.jpg",
+          "description": "旭东的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xudong/1751298564517_91dd898075cf8e53269ed1fd1f838680_4.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "旭东的视频",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/xudong/1751298566831_cf4eef233aae0a0cd21434610eb2b004_4.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "旭东的视频",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcj9y8822lvaip2jkqv",
+      "createdAt": "2025-06-30T15:49:28.994Z",
+      "updatedAt": "2025-06-30T15:49:28.994Z"
+    },
+    {
+      "nickname": "小谢",
+      "age": 30,
+      "height": 175,
+      "weight": 70,
+      "features": "牌18+，不做0，其他都可，四川人，手法专业",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "东方之门",
+      "latitude": 31.32258867591924,
+      "longitude": 120.68561430083108,
+      "area": "湖西社区工作委员会星港街199号",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoxie/1751298660252_51c87a1640b0a9263cd1bfcf371d7d0f_.jpg",
+          "thumbnail": "/uploads/technicians/xiaoxie/thumbnails/thumb_1751298660252_51c87a1640b0a9263cd1bfcf371d7d0f_.jpg",
+          "description": "小谢的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoxie/1751298660887_f065cc6dc7621ad7691625014f8f265a_.jpg",
+          "thumbnail": "/uploads/technicians/xiaoxie/thumbnails/thumb_1751298660887_f065cc6dc7621ad7691625014f8f265a_.jpg",
+          "description": "小谢的照片",
+          "sortOrder": 2
+        }
+      ],
+      "id": "mcja09gqw8cxmr861dh",
+      "createdAt": "2025-06-30T15:51:03.914Z",
+      "updatedAt": "2025-06-30T15:51:03.914Z"
+    },
+    {
+      "nickname": "花轮",
+      "age": 20,
+      "height": 175,
+      "weight": 62,
+      "features": "牌16，圈内，全能，广东靓仔，本人比照片好看，性格活泼爱聊天",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "苏州城市生活广场-B座",
+      "latitude": 31.349725933715064,
+      "longitude": 120.61728145831475,
+      "area": "江苏省苏州市姑苏区平泷路251号",
+      "cities": [
+        "suzhou"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hualun/1751298768720_1d8af7545eb8c0f3976b4c7707f8e253_.jpg",
+          "thumbnail": "/uploads/technicians/hualun/thumbnails/thumb_1751298768720_1d8af7545eb8c0f3976b4c7707f8e253_.jpg",
+          "description": "花轮的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hualun/1751298769890_03c0692774051000ebaf75c1580f57d7_.jpg",
+          "thumbnail": "/uploads/technicians/hualun/thumbnails/thumb_1751298769890_03c0692774051000ebaf75c1580f57d7_.jpg",
+          "description": "花轮的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hualun/1751298771499_5e0390ea895fc41818bf408803a773f6_.jpg",
+          "thumbnail": "/uploads/technicians/hualun/thumbnails/thumb_1751298771499_5e0390ea895fc41818bf408803a773f6_.jpg",
+          "description": "花轮的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hualun/1751298772907_16d8083691db101dca8c7b9a9b59f68d_.jpg",
+          "thumbnail": "/uploads/technicians/hualun/thumbnails/thumb_1751298772907_16d8083691db101dca8c7b9a9b59f68d_.jpg",
+          "description": "花轮的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hualun/1751298773313_998a56ece00a4ae46c881d4aa8a2c81e_.jpg",
+          "thumbnail": "/uploads/technicians/hualun/thumbnails/thumb_1751298773313_998a56ece00a4ae46c881d4aa8a2c81e_.jpg",
+          "description": "花轮的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/hualun/1751298774666_fc6dad53b229bafb5221e424860d47df_.jpg",
+          "thumbnail": "/uploads/technicians/hualun/thumbnails/thumb_1751298774666_fc6dad53b229bafb5221e424860d47df_.jpg",
+          "description": "花轮的照片",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mcja2r3ns4vp7f08on",
+      "createdAt": "2025-06-30T15:53:00.083Z",
+      "updatedAt": "2025-06-30T15:53:00.083Z"
+    },
+    {
+      "nickname": "小星",
+      "age": 25,
+      "height": 175,
+      "weight": 65,
+      "features": "牌17.5，圈内，全能，农🐂，Sm",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "吉庆街",
+      "latitude": 30.588911035415308,
+      "longitude": 114.29561013191767,
+      "area": "湖北省武汉市江岸区",
+      "cities": [
+        "wuhan"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoxing/1751298837510_7e6322e0a11f08a0e9491aaabb1f6eaa_.jpg",
+          "thumbnail": "/uploads/technicians/xiaoxing/thumbnails/thumb_1751298837510_7e6322e0a11f08a0e9491aaabb1f6eaa_.jpg",
+          "description": "小星的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoxing/1751298838137_474b196b94b673a071d1c92e891a3767_.jpg",
+          "thumbnail": "/uploads/technicians/xiaoxing/thumbnails/thumb_1751298838137_474b196b94b673a071d1c92e891a3767_.jpg",
+          "description": "小星的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoxing/1751298838496_7051f9876120129ecaffba603e9bf7e0_.jpg",
+          "thumbnail": "/uploads/technicians/xiaoxing/thumbnails/thumb_1751298838496_7051f9876120129ecaffba603e9bf7e0_.jpg",
+          "description": "小星的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoxing/1751298838870_d8aa96d2f8fffac44b1d92fd7a9d585b_.jpg",
+          "thumbnail": "/uploads/technicians/xiaoxing/thumbnails/thumb_1751298838870_d8aa96d2f8fffac44b1d92fd7a9d585b_.jpg",
+          "description": "小星的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoxing/1751298839127_dc27053add566bc156a216aab63b6225_.jpg",
+          "thumbnail": "/uploads/technicians/xiaoxing/thumbnails/thumb_1751298839127_dc27053add566bc156a216aab63b6225_.jpg",
+          "description": "小星的照片",
+          "sortOrder": 5
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaoxing/1751298839382_e24b61e0c25baeed9313b92476452819_.jpg",
+          "thumbnail": "/uploads/technicians/xiaoxing/thumbnails/thumb_1751298839382_e24b61e0c25baeed9313b92476452819_.jpg",
+          "description": "小星的照片",
+          "sortOrder": 6
+        }
+      ],
+      "id": "mcja43b5d95nkb785ns",
+      "createdAt": "2025-06-30T15:54:02.561Z",
+      "updatedAt": "2025-06-30T15:54:02.561Z"
+    },
+    {
+      "nickname": "大普",
+      "age": 28,
+      "height": 183,
+      "weight": 80,
+      "features": "牌18，圈内，全能，内蒙，黑皮橄榄球运动员",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "万科香港路8号-B座",
+      "latitude": 30.60122432683396,
+      "longitude": 114.29947203713562,
+      "area": "湖北省武汉市江岸区香港路8号",
+      "cities": [
+        "wuhan"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dapu/1751298939498_6bf20a8f07e74bda17389286306c488d_.jpg",
+          "thumbnail": "/uploads/technicians/dapu/thumbnails/thumb_1751298939498_6bf20a8f07e74bda17389286306c488d_.jpg",
+          "description": "大普的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dapu/1751298941035_32381312559e83f84432e0f35710797b_.png",
+          "thumbnail": "/uploads/technicians/dapu/thumbnails/thumb_1751298941035_32381312559e83f84432e0f35710797b_.png",
+          "description": "大普的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/dapu/1751298941487_d30ef8b1f0b83c773ef6352530f5f4e8_.jpg",
+          "thumbnail": "/uploads/technicians/dapu/thumbnails/thumb_1751298941487_d30ef8b1f0b83c773ef6352530f5f4e8_.jpg",
+          "description": "大普的照片",
+          "sortOrder": 3
+        }
+      ],
+      "id": "mcja6afao5ag44g49vl",
+      "createdAt": "2025-06-30T15:55:45.094Z",
+      "updatedAt": "2025-06-30T15:55:45.094Z"
+    },
+    {
+      "nickname": "阿君",
+      "age": 28,
+      "height": 179,
+      "weight": 70,
+      "features": "牌17.直男，不错0，其他都可，手法专业，调琴一流",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "7天酒店(新7天·武汉江汉路步行街亚心医院店)",
+      "latitude": 30.586785206307276,
+      "longitude": 114.28763021458089,
+      "area": "湖北省武汉市江汉区前进街街道江汉路商圈前进一路燕马新村7号",
+      "cities": [
+        "wuhan"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/ajun/1751298989012_9ca11e50d4df7327e61925cfa6c55321_.jpg",
+          "thumbnail": "/uploads/technicians/ajun/thumbnails/thumb_1751298989012_9ca11e50d4df7327e61925cfa6c55321_.jpg",
+          "description": "阿君的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/ajun/1751298989535_84dad49aafb180d85b00664ab38e279e_.jpg",
+          "thumbnail": "/uploads/technicians/ajun/thumbnails/thumb_1751298989535_84dad49aafb180d85b00664ab38e279e_.jpg",
+          "description": "阿君的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/ajun/1751298989878_9223e8eede8caa518fa4b9ed07322432_.jpg",
+          "thumbnail": "/uploads/technicians/ajun/thumbnails/thumb_1751298989878_9223e8eede8caa518fa4b9ed07322432_.jpg",
+          "description": "阿君的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/ajun/1751298995686_00c823aaaaddb1cde63f9d8ceb6e15cb_4.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "阿君的视频",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcja7fdwthgddxji0k8",
+      "createdAt": "2025-06-30T15:56:38.180Z",
+      "updatedAt": "2025-06-30T15:56:38.180Z"
+    },
+    {
+      "nickname": "阿刚",
+      "age": 26,
+      "height": 175,
+      "weight": 62,
+      "features": "牌16，直男，不做0，其他都可，手法专业，调琴一流",
+      "isNew": true,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "楚商映象酒店(武汉武胜路地铁站店)",
+      "latitude": 30.57283309001761,
+      "longitude": 114.26820238165548,
+      "area": "湖北省武汉市硚口区崇仁路51号",
+      "cities": [
+        "wuhan"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/agang/1751299046980_2a1692f2261b59644f236d956fcb94b9.jpg",
+          "thumbnail": "/uploads/technicians/agang/thumbnails/thumb_1751299046980_2a1692f2261b59644f236d956fcb94b9.jpg",
+          "description": "阿刚的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/agang/1751299047371_2bac4d89393f6d6fd137cc2b0583a966.jpg",
+          "thumbnail": "/uploads/technicians/agang/thumbnails/thumb_1751299047371_2bac4d89393f6d6fd137cc2b0583a966.jpg",
+          "description": "阿刚的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/agang/1751299047682_373670bc19122aa00d1f8e1fa560a1db.jpg",
+          "thumbnail": "/uploads/technicians/agang/thumbnails/thumb_1751299047682_373670bc19122aa00d1f8e1fa560a1db.jpg",
+          "description": "阿刚的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/agang/1751299048965_aeed7dc987f86ce31c5f44cdffc80075.jpg",
+          "thumbnail": "/uploads/technicians/agang/thumbnails/thumb_1751299048965_aeed7dc987f86ce31c5f44cdffc80075.jpg",
+          "description": "阿刚的照片",
+          "sortOrder": 4
+        }
+      ],
+      "id": "mcja8kigjrqgcswtsi",
+      "createdAt": "2025-06-30T15:57:31.480Z",
+      "updatedAt": "2025-06-30T15:57:31.480Z"
+    },
+    {
+      "nickname": "阿文",
+      "age": 23,
+      "height": 176,
+      "weight": 58,
+      "features": "牌17，直男，全能不做0，广东靓仔，调琴高手，薄肌型男",
+      "isNew": false,
+      "isRecommended": true,
+      "isActive": true,
+      "address": "水电小区",
+      "latitude": 30.610816020819374,
+      "longitude": 114.28172726941371,
+      "area": "湖北省武汉市江汉区天门墩路1号",
+      "cities": [
+        "wuhan"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/awen/1751299152545_4f89cc2b9a5bd9bb9906d637b0ef0386.jpg",
+          "thumbnail": "/uploads/technicians/awen/thumbnails/thumb_1751299152545_4f89cc2b9a5bd9bb9906d637b0ef0386.jpg",
+          "description": "阿文的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/awen/1751299153320_5ba22c9a6616702e98290223aeb725a8.jpg",
+          "thumbnail": "/uploads/technicians/awen/thumbnails/thumb_1751299153320_5ba22c9a6616702e98290223aeb725a8.jpg",
+          "description": "阿文的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/awen/1751299153948_7a1ee9da194a473671a3c3b5306d9893.jpg",
+          "thumbnail": "/uploads/technicians/awen/thumbnails/thumb_1751299153948_7a1ee9da194a473671a3c3b5306d9893.jpg",
+          "description": "阿文的照片",
+          "sortOrder": 3
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/awen/1751299154697_2953ee7636be0b5edbcc49652491a9c7.jpg",
+          "thumbnail": "/uploads/technicians/awen/thumbnails/thumb_1751299154697_2953ee7636be0b5edbcc49652491a9c7.jpg",
+          "description": "阿文的照片",
+          "sortOrder": 4
+        },
+        {
+          "type": "video",
+          "path": "/uploads/technicians/awen/1751299161719_8082cdf2c7800bc7136aac66eb80d896.mp4",
+          "thumbnail": "/uploads/common/video-thumbnail-v2.jpg",
+          "description": "阿文的视频",
+          "sortOrder": 5
+        }
+      ],
+      "id": "mcjab30pcntqp6s18uj",
+      "createdAt": "2025-06-30T15:59:28.777Z",
+      "updatedAt": "2025-06-30T15:59:28.777Z"
+    },
+    {
+      "nickname": "小晨",
+      "age": 21,
+      "height": 180,
+      "weight": 72,
+      "features": "大牌，圈内，可69，湖北人， 大三，只有周末晚上有空，只能接上🚪",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "武汉体育学院",
+      "latitude": 30.526660923337595,
+      "longitude": 114.38502800136418,
+      "area": "湖北省武汉市洪山区珞喻路461号",
+      "cities": [
+        "wuhan"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaochen/1751299263627_91429a6bbb173c473c8186b6ede69330_.jpg",
+          "thumbnail": "/uploads/technicians/xiaochen/thumbnails/thumb_1751299263627_91429a6bbb173c473c8186b6ede69330_.jpg",
+          "description": "小晨的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaochen/1751299263832_dd1d0433e75c81df74bb7ea253339a8f_.jpg",
+          "thumbnail": "/uploads/technicians/xiaochen/thumbnails/thumb_1751299263832_dd1d0433e75c81df74bb7ea253339a8f_.jpg",
+          "description": "小晨的照片",
+          "sortOrder": 2
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/xiaochen/1751299264128_f8bfdaa225608ba02a8afbb3439225ff_.jpg",
+          "thumbnail": "/uploads/technicians/xiaochen/thumbnails/thumb_1751299264128_f8bfdaa225608ba02a8afbb3439225ff_.jpg",
+          "description": "小晨的照片",
+          "sortOrder": 3
+        }
+      ],
+      "id": "mcjadaizs0fko28zbp",
+      "createdAt": "2025-06-30T16:01:11.819Z",
+      "updatedAt": "2025-06-30T16:01:11.819Z"
+    },
+    {
+      "nickname": "文成",
+      "age": 28,
+      "height": 179,
+      "weight": 75,
+      "features": "牌17，圈内，全能，肌肉正装猛男",
+      "isNew": false,
+      "isRecommended": false,
+      "isActive": true,
+      "address": "桔派酒店(武汉六渡桥地铁站店)",
+      "latitude": 30.581212608962947,
+      "longitude": 114.29153829270203,
+      "area": "湖北省武汉市江汉区中山大道375号",
+      "cities": [
+        "wuhan"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "path": "/uploads/technicians/wencheng/1751299448692_1749281395963.png",
+          "thumbnail": "/uploads/technicians/wencheng/thumbnails/thumb_1751299448692_1749281395963.png",
+          "description": "文成的照片",
+          "sortOrder": 1
+        },
+        {
+          "type": "image",
+          "path": "/uploads/technicians/wencheng/1751299449305_1749281405897.png",
+          "thumbnail": "/uploads/technicians/wencheng/thumbnails/thumb_1751299449305_1749281405897.png",
+          "description": "文成的照片",
+          "sortOrder": 2
+        }
+      ],
+      "id": "mcjah5gp56l3vtct5i7",
+      "createdAt": "2025-06-30T16:04:11.881Z",
+      "updatedAt": "2025-06-30T16:04:11.881Z"
     }
   ]
 }

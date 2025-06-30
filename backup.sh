@@ -2,8 +2,8 @@
 
 # 君悦彩虹SPA技师展示网站备份脚本
 # 用于备份数据文件和关键配置文件
-
-# 创建备份目录
+    
+    # 创建备份目录
 BACKUP_DIR="backups/backup_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$BACKUP_DIR"
 echo "创建备份目录: $BACKUP_DIR"

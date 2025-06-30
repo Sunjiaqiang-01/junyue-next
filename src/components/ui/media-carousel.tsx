@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
 import { TechnicianMedia } from '@/lib/data/types'
@@ -114,22 +113,19 @@ export function MediaCarousel({
                   onClick={() => handleMediaClick(item, index)}
                 >
                   {item.type === 'image' ? (
-                    <Image
+                    // 使用原生img标签替代Next.js Image组件
+                    <img
                       src={item.path}
                       alt={item.description || `媒体 ${index + 1}`}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
                     />
                   ) : (
                     <div className="relative w-full h-full">
-                      <Image
-                        // 使用统一视频缩略图函数
-                        src={getThumbnailUrl(item.type, item.thumbnail)}
+                      {/* 使用原生img标签替代Next.js Image组件 */}
+                      <img
+                        src={getThumbnailUrl(item.type, item.thumbnail, item.path)}
                         alt={item.description || `视频 ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="w-full h-full object-cover"
                       />
                       {/* 播放按钮 */}
                       <div className="absolute inset-0 flex items-center justify-center bg-black/20">
@@ -201,12 +197,10 @@ export function MediaCarousel({
                 activeIndex === index ? "border-primary" : "border-gray-300"
               )}
             >
-              <Image
-                // 使用统一视频缩略图函数
-                src={getThumbnailUrl(item.type, item.thumbnail)}
+              {/* 使用原生img标签替代Next.js Image组件 */}
+              <img
+                src={getThumbnailUrl(item.type, item.thumbnail, item.path)}
                 alt={`缩略图 ${index + 1}`}
-                width={64}
-                height={64}
                 className="w-full h-full object-cover"
               />
               {/* 视频标识 */}
@@ -233,12 +227,11 @@ export function MediaCarousel({
           </button>
           
           <div className="relative max-w-4xl max-h-full">
-            <Image
+            {/* 使用原生img标签替代Next.js Image组件 */}
+            <img
               src={currentMedia.path}
               alt={currentMedia.description || '图片'}
-              width={800}
-              height={600}
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-[80vh] object-contain"
             />
           </div>
         </div>

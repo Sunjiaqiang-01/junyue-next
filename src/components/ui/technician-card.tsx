@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { MapPin, ExternalLink, Navigation, RefreshCw } from 'lucide-react'
 import { MediaCarousel } from './media-carousel'
 import { Badge } from './badge'

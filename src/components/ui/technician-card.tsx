@@ -92,9 +92,9 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
     try {
       // 记录技师访问
       recordTechnicianView();
-      
-      const lat = parseFloat(latitude.toString())
-      const lng = parseFloat(longitude.toString())
+
+    const lat = parseFloat(latitude.toString())
+    const lng = parseFloat(longitude.toString())
       
       // 检查经纬度值是否有效
       if (isNaN(lat) || isNaN(lng)) {
@@ -113,7 +113,7 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
       // 处理APP跳转失败的情况
       let appOpenTimeout: number | null = null
 
-      if (type === 'baidu') {
+    if (type === 'baidu') {
         // 百度地图跳转
         if (isMobile) {
           // 构建百度地图URL
@@ -136,8 +136,8 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
           }, 2500)
         } else {
           // PC设备使用百度地图网页版
-          const baiduUrl = `https://api.map.baidu.com/marker?location=${lat},${lng}&title=${encodeURIComponent(nickname)}&content=${encodeURIComponent(address)}&output=html&src=webapp.junyue.spa`
-          window.open(baiduUrl, '_blank')
+      const baiduUrl = `https://api.map.baidu.com/marker?location=${lat},${lng}&title=${encodeURIComponent(nickname)}&content=${encodeURIComponent(address)}&output=html&src=webapp.junyue.spa`
+      window.open(baiduUrl, '_blank')
         }
       } else {
         // 高德地图跳转
@@ -166,7 +166,7 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
             const gaodeWebUrl = `https://uri.amap.com/navigation?to=${gcjLng},${gcjLat},${encodeURIComponent(nickname)}&toName=${encodeURIComponent(address)}&src=junyue&callnative=1`
             window.location.href = gaodeWebUrl
           }, 2500)
-        } else {
+    } else {
           // PC设备使用高德地图网页版
           const gaodeWebUrl = `https://uri.amap.com/marker?position=${gcjLng},${gcjLat}&name=${encodeURIComponent(nickname)}&address=${encodeURIComponent(address)}&src=junyue`
           window.open(gaodeWebUrl, '_blank')

@@ -128,7 +128,7 @@ async function getTechnicianData() {
   } catch (error) {
     console.error('Failed to get technician data:', error);
     return { total: 0, active: 0, cityDistribution: {} };
-  }
+      }
 }
 
 /**
@@ -143,7 +143,7 @@ async function getTechnicianViewsData(period: string) {
     
     const viewsData = JSON.parse(fs.readFileSync(viewsPath, 'utf8'));
     const views = viewsData.views || [];
-    
+
     // 根据时间段筛选数据
     const now = new Date();
     let startDate = new Date();

@@ -1,75 +1,88 @@
-import React from 'react';
+"use client"
+
+import React from 'react'
+import { cn } from '@/lib/utils'
 
 interface ProgressRingProps {
-  progress: number; // 0-100
-  size?: number;
-  strokeWidth?: number;
-  color?: string;
-  backgroundColor?: string;
-  showText?: boolean;
-  className?: string;
+  progress: number
+  size?: number
+  strokeWidth?: number
+  className?: string
+  backgroundColor?: string
+  progressColor?: string
+  showText?: boolean
+  icon?: React.ReactNode
 }
 
-export const ProgressRing: React.FC<ProgressRingProps> = ({
-  progress,
-  size = 120,
+export function ProgressRing({
+  progress = 0,
+  size = 100,
   strokeWidth = 8,
-  color = '#1A2B5C',
-  backgroundColor = '#E5E7EB',
+  className,
+  backgroundColor = '#e5e7eb',
+  progressColor = '#3b82f6',
   showText = true,
-  className = ''
-}) => {
-  const radius = (size - strokeWidth) / 2;
-  const circumference = radius * 2 * Math.PI;
-  const offset = circumference - (progress / 100) * circumference;
+  icon
+}: ProgressRingProps) {
+  // 确保进度在0-100之间
+  const normalizedProgress = Math.min(100, Math.max(0, progress))
+  
+  // 计算圆形路径参数
+  const radius = (size - strokeWidth) / 2
+  const circumference = radius * 2 * Math.PI
+  const strokeDashoffset = circumference - (normalizedProgress / 100) * circumference
 
-  const getProgressColor = (value: number) => {
-    if (value > 85) return '#EF4444'; // 红色
-    if (value > 70) return '#F59E0B'; // 黄色
-    return color; // 默认颜色
-  };
-
-  const progressColor = getProgressColor(progress);
+  const center = size / 2
 
   return (
-    <div className={`inline-flex items-center justify-center ${className}`}>
+    <div className={cn('relative inline-flex items-center justify-center', className)}>
       <svg
         width={size}
         height={size}
+        viewBox={`0 0 ${size} ${size}`}
         className="transform -rotate-90"
       >
-        {/* 背景圆环 */}
+        {/* 背景圆圈 */}
         <circle
-          cx={size / 2}
-          cy={size / 2}
+          cx={center}
+          cy={center}
           r={radius}
-          stroke={backgroundColor}
+          fill="none"
           strokeWidth={strokeWidth}
-          fill="transparent"
+          stroke={backgroundColor}
         />
         
-        {/* 进度圆环 */}
+        {/* 进度圆圈 */}
         <circle
-          cx={size / 2}
-          cy={size / 2}
+          cx={center}
+          cy={center}
           r={radius}
-          stroke={progressColor}
+          fill="none"
           strokeWidth={strokeWidth}
-          fill="transparent"
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
+          stroke={
+            progressColor === 'auto' 
+              ? normalizedProgress > 80 
+                ? '#ef4444' 
+                : normalizedProgress > 60 
+                  ? '#f59e0b' 
+                  : '#10b981'
+              : progressColor
+          }
           strokeLinecap="round"
-          className="transition-all duration-500 ease-in-out"
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          style={{ transition: 'stroke-dashoffset 0.5s ease-out' }}
         />
       </svg>
       
-      {showText && (
-        <div className="absolute text-center">
-          <div className={`text-2xl font-bold ${progress > 85 ? 'text-red-600' : progress > 70 ? 'text-yellow-600' : 'text-gray-900'}`}>
-            {Math.round(progress)}%
-          </div>
+      {/* 中间文字或图标 */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        {icon ? (
+          icon
+        ) : showText ? (
+          <span className="text-lg font-semibold">{Math.round(normalizedProgress)}%</span>
+        ) : null}
         </div>
-      )}
     </div>
-  );
-}; 
+  )
+} 

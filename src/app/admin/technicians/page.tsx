@@ -17,10 +17,15 @@ import {
   EyeOff,
   MapPin,
   Camera,
-  Video
+  Video,
+  Filter
 } from 'lucide-react'
 
 import { Technician, TechnicianMedia } from '@/lib/data/types'
+import { getCityThemeColor, getAllCities } from '@/lib/city-theme'
+
+// 城市配置
+const CITIES = getAllCities();
 
 export default function AdminTechniciansPage() {
   const [technicians, setTechnicians] = useState<Technician[]>([])
@@ -29,12 +34,31 @@ export default function AdminTechniciansPage() {
   const [editingTechnician, setEditingTechnician] = useState<Technician | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const { toasts, success, error, warning } = useToast()
+  // 添加筛选状态
+  const [selectedCity, setSelectedCity] = useState<string | null>(null)
+  const [searchTerm, setSearchTerm] = useState<string>('')
 
   // 获取技师列表
   const fetchTechnicians = async () => {
     setLoading(true)
     try {
-      const response = await fetch('/api/admin/technicians', {
+      // 构建查询参数
+      const queryParams = new URLSearchParams()
+      
+      // 添加城市筛选参数
+      if (selectedCity) {
+        queryParams.append('city', selectedCity)
+      }
+      
+      // 添加搜索参数
+      if (searchTerm.trim()) {
+        queryParams.append('search', searchTerm.trim())
+      }
+      
+      // 添加分页参数，设置较大的limit
+      queryParams.append('limit', '100')
+      
+      const response = await fetch(`/api/admin/technicians?${queryParams.toString()}`, {
         credentials: 'include'
       })
       
@@ -55,7 +79,7 @@ export default function AdminTechniciansPage() {
 
   useEffect(() => {
     fetchTechnicians()
-  }, [])
+  }, [selectedCity, searchTerm]) // 当筛选条件变化时重新获取数据
 
   // 处理表单提交
   const handleFormSubmit = async (formData: any) => {
@@ -283,6 +307,100 @@ export default function AdminTechniciansPage() {
               </div>
             </div>
 
+            {/* 筛选区域 */}
+            <Card className="p-4">
+              <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+                {/* 城市筛选 */}
+                <div className="w-full md:w-auto">
+                  <div className="text-sm font-medium mb-2 flex items-center">
+                    <Filter className="w-4 h-4 mr-1" />
+                    城市筛选
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Button
+                      size="sm"
+                      variant={selectedCity === null ? "default" : "outline"}
+                      onClick={() => setSelectedCity(null)}
+                    >
+                      全部
+                    </Button>
+                    {CITIES.map((city) => (
+                      <Button
+                        key={city.key}
+                        size="sm"
+                        variant={selectedCity === city.key ? "default" : "outline"}
+                        onClick={() => setSelectedCity(city.key)}
+                        style={{
+                          backgroundColor: selectedCity === city.key ? city.color : undefined,
+                          borderColor: selectedCity === city.key ? city.color : undefined,
+                        }}
+                      >
+                        {city.name}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 搜索框 */}
+                <div className="w-full md:w-72">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="搜索技师名称..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full p-2 pr-8 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button 
+                      className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500"
+                      onClick={() => setSearchTerm('')}
+                    >
+                      {searchTerm && 'x'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* 当前筛选标签 */}
+              {(selectedCity || searchTerm) && (
+                <div className="mt-3 flex flex-wrap gap-2 items-center">
+                  <span className="text-sm text-gray-600">当前筛选:</span>
+                  {selectedCity && (
+                    <Badge>
+                      城市: {CITIES.find(c => c.key === selectedCity)?.name}
+                      <button 
+                        className="ml-1 text-gray-500 hover:text-gray-700"
+                        onClick={() => setSelectedCity(null)}
+                      >
+                        x
+                      </button>
+                    </Badge>
+                  )}
+                  {searchTerm && (
+                    <Badge variant="outline">
+                      搜索: {searchTerm}
+                      <button 
+                        className="ml-1 text-gray-500 hover:text-gray-700"
+                        onClick={() => setSearchTerm('')}
+                      >
+                        x
+                      </button>
+                    </Badge>
+                  )}
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    onClick={() => {
+                      setSelectedCity(null);
+                      setSearchTerm('');
+                    }}
+                  >
+                    清除全部
+                  </Button>
+                </div>
+              )}
+            </Card>
+
             {/* 统计信息 */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <Card className="p-4">
@@ -342,7 +460,10 @@ export default function AdminTechniciansPage() {
 
             {/* 技师列表 */}
             <Card className="p-6">
-              <h2 className="text-xl font-semibold mb-4">技师列表</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                技师列表
+                {!loading && <span className="text-sm font-normal text-gray-500 ml-2">共 {technicians.length} 位</span>}
+              </h2>
               
               {loading ? (
                 <div className="text-center py-8">

@@ -4,8 +4,6 @@ import { existsSync } from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 import { verifyAdmin } from '@/lib/auth';
-import { COMMON_VIDEO_THUMBNAIL } from '@/lib/media/thumbnail';
-import pinyin from 'pinyin';
 
 const UPLOAD_DIR = path.join(process.cwd(), 'public', 'uploads');
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
@@ -13,17 +11,28 @@ const MAX_IMAGE_SIZE = 2 * 1024 * 1024; // 2MB for images
 const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 const ALLOWED_VIDEO_TYPES = ['video/mp4', 'video/webm', 'video/mov'];
 
-/**
- * 将中文转换为拼音
- * @param text 需要转换的中文文本
- * @returns 拼音字符串，无音调
- */
-function convertToPinyin(text: string): string {
-  if (!text) return '';
-  return pinyin(text, {
-    style: pinyin.STYLE_NORMAL, // 无音调
-    heteronym: false,           // 不启用多音字
-  }).flat().join('');
+// 创建视频缩略图的函数（主题色背景+播放按钮）
+async function createVideoThumbnail(outputPath: string): Promise<void> {
+  const svgBuffer = Buffer.from(`
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+      <!-- 主题色背景 -->
+      <rect width="200" height="200" fill="#1A2B5C"/>
+      
+      <!-- 播放按钮圆形背景 -->
+      <circle cx="100" cy="100" r="35" fill="white" opacity="0.95"/>
+      
+      <!-- 播放三角形 -->
+      <polygon points="85,75 85,125 130,100" fill="#1A2B5C"/>
+      
+      <!-- 视频标识文字 -->
+      <text x="100" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" opacity="0.8">视频</text>
+    </svg>
+  `);
+  
+  await sharp(svgBuffer)
+    .resize(200, 200)
+    .jpeg({ quality: 90 })
+    .toFile(outputPath);
 }
 
 export async function POST(request: NextRequest) {
@@ -46,11 +55,6 @@ export async function POST(request: NextRequest) {
     if (category === 'technicians' && !technicianNickname) {
       return NextResponse.json({ error: 'Technician nickname is required for technician uploads' }, { status: 400 });
     }
-
-    // 将技师昵称转为拼音
-    const technicianFolderName = category === 'technicians' && technicianNickname 
-      ? convertToPinyin(technicianNickname) 
-      : technicianNickname;
 
     // 验证文件类型和大小
     const isImage = ALLOWED_IMAGE_TYPES.includes(file.type);
@@ -76,9 +80,9 @@ export async function POST(request: NextRequest) {
 
     // 创建上传目录结构
     let categoryDir: string;
-    if (category === 'technicians' && technicianFolderName) {
-      // 为技师创建以拼音昵称命名的文件夹
-      categoryDir = path.join(UPLOAD_DIR, category, technicianFolderName);
+    if (category === 'technicians' && technicianNickname) {
+      // 为技师创建以昵称命名的文件夹
+      categoryDir = path.join(UPLOAD_DIR, category, technicianNickname);
     } else {
       // 其他类别按原来的方式
       categoryDir = path.join(UPLOAD_DIR, category);
@@ -88,13 +92,21 @@ export async function POST(request: NextRequest) {
       await mkdir(categoryDir, { recursive: true });
     }
 
-    // 获取文件扩展名并生成安全的文件名
+    // 保持原始文件名（如果有重复会自动处理）
     const originalFileName = file.name;
     const fileExtension = path.extname(originalFileName);
-    // 将文件名转为拼音+时间戳，确保唯一性和安全性
-    const baseName = Date.now() + '_' + convertToPinyin(path.basename(originalFileName, fileExtension));
-    const fileName = `${baseName}${fileExtension}`;
-    const filePath = path.join(categoryDir, fileName);
+    const baseName = path.basename(originalFileName, fileExtension);
+    
+    // 检查文件是否已存在，如果存在则添加时间戳
+    let fileName = originalFileName;
+    let filePath = path.join(categoryDir, fileName);
+    let counter = 1;
+    
+    while (existsSync(filePath)) {
+      fileName = `${baseName}_${counter}${fileExtension}`;
+      filePath = path.join(categoryDir, fileName);
+      counter++;
+    }
 
     // 保存文件
     const bytes = await file.arrayBuffer();
@@ -118,22 +130,39 @@ export async function POST(request: NextRequest) {
         .jpeg({ quality: 80 })
         .toFile(thumbnailFullPath);
 
-      if (category === 'technicians' && technicianFolderName) {
-        thumbnailPath = `/uploads/${category}/${technicianFolderName}/thumbnails/${thumbnailFileName}`;
+      if (category === 'technicians' && technicianNickname) {
+        thumbnailPath = `/uploads/${category}/${technicianNickname}/thumbnails/${thumbnailFileName}`;
       } else {
         thumbnailPath = `/uploads/${category}/thumbnails/${thumbnailFileName}`;
       }
     }
 
-    // 为视频始终使用统一的缩略图
+    // 为视频生成缩略图（主题色背景+播放按钮）
     if (isVideo) {
-      thumbnailPath = COMMON_VIDEO_THUMBNAIL;
+      const thumbnailDir = path.join(categoryDir, 'thumbnails');
+      if (!existsSync(thumbnailDir)) {
+        await mkdir(thumbnailDir, { recursive: true });
+      }
+      
+      // 生成缩略图文件名
+      const thumbnailFileName = `thumb_${baseName}.jpg`;
+      const thumbnailFullPath = path.join(thumbnailDir, thumbnailFileName);
+      
+      // 生成视频缩略图
+      await createVideoThumbnail(thumbnailFullPath);
+      console.log('Video thumbnail created successfully');
+
+      if (category === 'technicians' && technicianNickname) {
+        thumbnailPath = `/uploads/${category}/${technicianNickname}/thumbnails/${thumbnailFileName}`;
+      } else {
+        thumbnailPath = `/uploads/${category}/thumbnails/${thumbnailFileName}`;
+      }
     }
 
     // 构建文件URL
     let fileUrl: string;
-    if (category === 'technicians' && technicianFolderName) {
-      fileUrl = `/uploads/${category}/${technicianFolderName}/${fileName}`;
+    if (category === 'technicians' && technicianNickname) {
+      fileUrl = `/uploads/${category}/${technicianNickname}/${fileName}`;
     } else {
       fileUrl = `/uploads/${category}/${fileName}`;
     }
@@ -176,26 +205,34 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const category = searchParams.get('category') || 'general';
     
-    // 获取上传文件列表
-    const categoryPath = path.join(UPLOAD_DIR, category);
-    
-    if (!existsSync(categoryPath)) {
-      return NextResponse.json({ 
-        success: true,
-        data: []
-      });
-    }
-    
-    return NextResponse.json({ 
+    // 这里应该从数据库获取文件列表
+    // 暂时返回模拟数据
+    const mockFiles = [
+      {
+        id: 1,
+        fileName: 'sample_image.jpg',
+        originalName: 'sample.jpg',
+        fileUrl: '/uploads/technician/sample_image.jpg',
+        thumbnailUrl: '/uploads/technician/thumbnails/thumb_sample_image.jpg',
+        fileSize: 1024000,
+        fileType: 'image/jpeg',
+        mediaType: 'image',
+        category: 'technician',
+        technicianId: 1,
+        uploadedAt: new Date().toISOString()
+      }
+    ];
+
+    return NextResponse.json({
       success: true,
-      message: `File listing for ${category} not implemented yet`
+      data: mockFiles.filter(file => file.category === category)
     });
-    
+
   } catch (error) {
-    console.error('API error:', error);
+    console.error('Get files error:', error);
     return NextResponse.json(
-      { error: 'Server error' },
+      { error: 'Failed to get files' },
       { status: 500 }
     );
   }
-}
+} 

@@ -375,7 +375,7 @@ export default function AdminDashboard() {
                 <div className="flex justify-between items-center mb-0.5">
                   <span className="text-xs text-gray-600">CPU使用率</span>
                   <span className="text-xs font-medium text-gray-900">{stats.cpu.usage}%</span>
-                </div>
+            </div>
                 <Progress value={stats.cpu.usage} className="h-1.5" 
                   style={{
                     backgroundColor: '#e5e7eb', 
@@ -500,8 +500,8 @@ export default function AdminDashboard() {
                   <div key={tech.id} className="flex items-center">
                     <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mr-2">
                       <span className="font-semibold text-blue-700 text-xs">{index + 1}</span>
-                    </div>
-                    <div className="flex-1">
+              </div>
+              <div className="flex-1">
                       <div className="flex justify-between items-center">
                         <p className="text-xs font-medium text-gray-900">{tech.name}</p>
                         <p className="text-xs text-gray-600">{tech.views} 访问</p>
@@ -533,7 +533,7 @@ export default function AdminDashboard() {
               ) : (
                 <div className="flex items-center justify-center h-full">
                   <p className="text-gray-500 text-xs">暂无数据</p>
-                </div>
+              </div>
               )}
             </div>
           </Card>
@@ -558,16 +558,16 @@ export default function AdminDashboard() {
                       activity.type === 'login' ? 'text-indigo-600' :
                       'text-yellow-600'
                     }`}>{activity.icon}</span>
-                  </div>
-                  <div className="flex-1">
+              </div>
+              <div className="flex-1">
                     <p className="text-xs text-gray-900 line-clamp-1">{activity.message}</p>
                     <p className="text-xs text-gray-500">{activity.time}</p>
                   </div>
-                </div>
+              </div>
               ))}
             </div>
           </Card>
-        </div>
+          </div>
       </div>
     </AdminLayout>
   )

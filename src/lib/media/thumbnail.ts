@@ -11,7 +11,7 @@ export const COMMON_VIDEO_THUMBNAIL = '/uploads/common/video-thumbnail-v2.jpg';
  * 如果是视频类型，则返回统一的视频缩略图
  * @param mediaType 媒体类型('image' | 'video')
  * @param thumbnailPath 原始缩略图路径
- * @param originalPath 原始文件路径
+ * @param originalPath 原始图片路径，用于构建可能的缩略图路径
  * @returns 最终使用的缩略图路径
  */
 export function getThumbnailUrl(mediaType: 'image' | 'video', thumbnailPath?: string | null, originalPath?: string): string {
@@ -31,19 +31,21 @@ export function getThumbnailUrl(mediaType: 'image' | 'video', thumbnailPath?: st
     const pathParts = originalPath.split('/');
     if (pathParts.length > 0) {
       const fileName = pathParts[pathParts.length - 1];
+      
       // 构建可能的缩略图路径
-      
-      // 目录部分(不包括文件名)
+      // 方法1: /uploads/technicians/xiaokang/thumbnails/thumb_filename.jpg
       const dirPath = pathParts.slice(0, -1).join('/');
+      const possibleThumbPath1 = `${dirPath}/thumbnails/thumb_${fileName}`;
       
-      // 构建缩略图可能的路径
-      const thumbPath = `${dirPath}/thumbnails/thumb_${fileName}`;
+      // 方法2: 替换原始路径中的目录为thumbnails子目录
+      const technicianDir = pathParts.slice(0, -1).join('/');
+      const possibleThumbPath2 = `${technicianDir}/thumbnails/thumb_${fileName}`;
       
-      // 返回可能的缩略图路径
-      return thumbPath;
+      // 返回第一种构建方式的缩略图路径
+      return possibleThumbPath1;
     }
   }
   
-  // 默认占位图片
-  return '/uploads/common/placeholder.jpg';
+  // 如果无法构建缩略图路径，返回原图路径或默认图片
+  return originalPath || '/uploads/common/no-image.jpg';
 }

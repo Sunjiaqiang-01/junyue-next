@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { TechnicianForm } from '@/components/custom/technician-form'
 import { useToast, ToastContainer } from '@/components/ui/toast'
-import Image from 'next/image'
 import { 
   Plus, 
   Edit, 
@@ -487,12 +486,12 @@ export default function AdminTechniciansPage() {
                         <div className="flex-shrink-0">
                           {technician.media && technician.media.length > 0 ? (
                             <div className="relative">
-                              <Image
+                              <img
                                 src={technician.media[0].thumbnail}
                                 alt={`${technician.nickname}头像`}
                                 width={80}
                                 height={80}
-                                className="rounded-lg object-cover"
+                                className="rounded-lg object-cover w-20 h-20"
                               />
                               {technician.media.length > 1 && (
                                 <div className="absolute -bottom-1 -right-1 bg-blue-600 text-white text-xs px-1 py-0.5 rounded">

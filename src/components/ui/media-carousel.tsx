@@ -28,7 +28,26 @@ export function MediaCarousel({
   const [activeIndex, setActiveIndex] = useState(0)
   const [isImageFullscreen, setIsImageFullscreen] = useState(false)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const [videoError, setVideoError] = useState(false)
   const swiperRef = useRef<any>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  // 检测设备类型
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    // 检测是否为移动设备
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+    }
+  }, [])
 
   if (!media || media.length === 0) {
     return (
@@ -54,6 +73,8 @@ export function MediaCarousel({
       setIsImageFullscreen(true)
     } else {
       // 视频在卡片内播放
+      setActiveIndex(index)
+      setVideoError(false)
       setIsVideoPlaying(true)
     }
   }
@@ -62,6 +83,39 @@ export function MediaCarousel({
   const handleVideoEnded = () => {
     setIsVideoPlaying(false)
   }
+  
+  // 处理视频错误
+  const handleVideoError = () => {
+    console.error('视频播放失败:', currentMedia.path)
+    setVideoError(true)
+  }
+  
+  // 尝试播放视频
+  const playVideo = () => {
+    if (videoRef.current) {
+      const playPromise = videoRef.current.play()
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // 自动播放成功
+            setVideoError(false)
+          })
+          .catch(error => {
+            // 自动播放被阻止
+            console.warn('视频自动播放被阻止:', error)
+            setVideoError(false) // 不显示错误，因为这可能只是浏览器策略
+          })
+      }
+    }
+  }
+  
+  // 当视频状态改变时尝试播放
+  useEffect(() => {
+    if (isVideoPlaying && videoRef.current) {
+      playVideo()
+    }
+  }, [isVideoPlaying])
 
   return (
     <>
@@ -70,16 +124,35 @@ export function MediaCarousel({
         {/* 视频播放模式 */}
         {isVideoPlaying && currentMedia.type === 'video' ? (
           <div className={cn("relative w-full", aspectRatio)}>
-            <video
-              src={currentMedia.path}
-              controls
-              autoPlay
-              className="w-full h-full object-cover"
-              onEnded={handleVideoEnded}
-              onPause={() => setIsVideoPlaying(false)}
-            >
-              您的浏览器不支持视频播放
-            </video>
+            {!videoError ? (
+              <video
+                ref={videoRef}
+                src={currentMedia.path}
+                controls
+                playsInline
+                preload="auto"
+                poster={getThumbnailUrl('video', currentMedia.thumbnail, currentMedia.path)}
+                className="w-full h-full object-cover"
+                onEnded={handleVideoEnded}
+                onError={handleVideoError}
+                onPause={() => setIsVideoPlaying(false)}
+              >
+                您的浏览器不支持视频播放
+              </video>
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100 p-4">
+                <div className="text-red-500 mb-2">视频加载失败</div>
+                <p className="text-sm text-gray-600 text-center mb-4">
+                  视频格式可能不受支持，或网络连接问题
+                </p>
+                <button
+                  onClick={() => setIsVideoPlaying(false)}
+                  className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  返回图片
+                </button>
+              </div>
+            )}
             {/* 关闭按钮 */}
             <button
               onClick={() => setIsVideoPlaying(false)}
@@ -88,7 +161,7 @@ export function MediaCarousel({
               ✕
             </button>
           </div>
-        ) : (
+        ) :
           /* 轮播模式 */
           <Swiper
             modules={[Navigation, Pagination]}
@@ -148,7 +221,7 @@ export function MediaCarousel({
               </SwiperSlide>
             ))}
           </Swiper>
-        )}
+        }
 
         {/* 自定义导航按钮 - 只在轮播模式且有多个媒体时显示 */}
         {!isVideoPlaying && media.length > 1 && (

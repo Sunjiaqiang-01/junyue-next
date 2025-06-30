@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { MessageCircle, X, Download } from 'lucide-react'
 import { useDialog, DialogContainer } from './dialog'
 import { CustomerService } from '@/lib/data/types'
@@ -86,9 +85,9 @@ export function FloatingCustomerService() {
         </button>
       </div>
 
-      {/* 客服面板 */}
+      {/* 客服面板 - 增加移动端自适应 */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-96 bg-white rounded-lg shadow-xl border z-50 overflow-hidden">
+        <div className="fixed bottom-24 right-6 w-[90vw] max-w-96 bg-white rounded-lg shadow-xl border z-50 overflow-hidden md:w-96">
           {/* 头部 */}
           <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4">
             <h3 className="font-semibold text-lg">联系客服</h3>
@@ -127,7 +126,7 @@ export function FloatingCustomerService() {
           </div>
 
           {/* 客服信息展示区域 */}
-          <div className="min-h-[300px]">
+          <div className="min-h-[300px] max-h-[70vh] overflow-y-auto">
             {selectedService ? (
               <div className="p-6">
                 {/* 客服标题 */}
@@ -141,7 +140,7 @@ export function FloatingCustomerService() {
                 {/* 二维码展示 - 3:4比例 */}
                 <div className="flex flex-col items-center mb-6">
                   <div className="w-48 h-64 bg-gray-100 rounded-lg overflow-hidden shadow-md mb-3">
-                    <Image
+                    <img
                       src={selectedService.qrCodePath}
                       alt={`${selectedService.city}客服二维码`}
                       width={192}

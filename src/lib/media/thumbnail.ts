@@ -4,7 +4,7 @@
  */
 
 // 统一的视频缩略图路径
-export const COMMON_VIDEO_THUMBNAIL = '/uploads/common/video-thumbnail.jpg';
+export const COMMON_VIDEO_THUMBNAIL = '/uploads/common/video-thumbnail-v2.jpg';
 
 /**
  * 获取媒体文件的缩略图路径

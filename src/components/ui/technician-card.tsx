@@ -73,7 +73,8 @@ export function TechnicianCard({ technician, className = '', userLocation }: Tec
       const baiduUrl = `https://api.map.baidu.com/marker?location=${lat},${lng}&title=${encodeURIComponent(nickname)}&content=${encodeURIComponent(address)}&output=html&src=webapp.junyue.spa`
       window.open(baiduUrl, '_blank')
     } else {
-      const gaodeUrl = `https://uri.amap.com/marker?position=${lng},${lat}&name=${encodeURIComponent(nickname)}&src=junyue&coordinate=gcj02&callnative=0`
+      // 构建更完整的高德地图URL
+      const gaodeUrl = `https://uri.amap.com/navigation?to=${lng},${lat},${encodeURIComponent(address)}&from=&mode=car&policy=1&src=junyue&callnative=1`
       window.open(gaodeUrl, '_blank')
     }
   }

@@ -162,6 +162,7 @@ export function CustomerServiceForm({
           throw new Error(errorData.error || '二维码上传失败');
         }
 
+        console.log('二维码上传成功，刷新页面');
         // 刷新页面以显示新上传的二维码
         window.location.reload();
       }

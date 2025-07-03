@@ -162,18 +162,26 @@ export default function CustomerServiceManagement() {
               const uploadResult = await uploadResponse.json();
               // 更新客服信息中的二维码路径
               result.data.qrCodePath = uploadResult.data.qrCodePath;
+              // 添加到客服列表
+              setCustomerServices(prev => [...prev, result.data]);
+              setShowForm(false);
+              // 添加完成后刷新页面以确保正确显示二维码
+              window.location.reload();
             } else {
-              console.error('二维码上传失败');
               const errorData = await uploadResponse.json();
               throw new Error(errorData.error || '二维码上传失败');
             }
+          } else {
+            // 如果没有二维码，删除刚才创建的客服
+            console.error('未提供二维码，删除该客服');
+            await fetch(`/api/admin/customer-service/${result.data.id}`, {
+              method: 'DELETE',
+              headers: {
+                'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
+              }
+            });
+            throw new Error('创建客服失败：未提供二维码');
           }
-          
-          setCustomerServices(prev => [...prev, result.data]);
-          setShowForm(false);
-
-          // 添加完成后刷新页面以确保正确显示二维码
-          window.location.reload();
         } else {
           throw new Error('添加客服失败');
         }

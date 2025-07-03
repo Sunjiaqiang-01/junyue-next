@@ -160,22 +160,30 @@ export function FloatingCustomerService() {
                     {/* 二维码展示 - 3:4比例 */}
                     <div className="flex flex-col items-center mb-6">
                       <div className="w-48 h-64 bg-gray-100 rounded-lg overflow-hidden shadow-md mb-3">
-                        <img
-                          src={service.qrCodePath + `?t=${Date.now()}`}
-                          alt={`${service.city}客服二维码`}
-                          width={192}
-                          height={256}
-                          className="w-full h-full object-cover"
-                        />
+                        {service.qrCodePath ? (
+                          <img
+                            src={service.qrCodePath + `?t=${Date.now()}`}
+                            alt={`${service.city}客服二维码`}
+                            width={192}
+                            height={256}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                            <span className="text-gray-500">暂无二维码</span>
+                          </div>
+                        )}
                       </div>
                       {/* 下载二维码按钮移到二维码下方 */}
-                      <button
-                        onClick={() => handleDownloadQR(service.qrCodePath, service.city)}
-                        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center gap-2 font-medium"
-                      >
-                        <Download className="w-4 h-4" />
-                        下载二维码
-                      </button>
+                      {service.qrCodePath && (
+                        <button
+                          onClick={() => handleDownloadQR(service.qrCodePath, service.city)}
+                          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center gap-2 font-medium"
+                        >
+                          <Download className="w-4 h-4" />
+                          下载二维码
+                        </button>
+                      )}
                     </div>
                     
                     {/* 微信号显示和复制按钮在同一行 */}

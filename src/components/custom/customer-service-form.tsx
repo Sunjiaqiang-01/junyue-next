@@ -5,17 +5,33 @@ import { CustomerService } from '@/lib/data/types';
 
 interface CustomerServiceFormProps {
   customerService?: CustomerService;
-  onSubmit: (data: Partial<CustomerService>) => Promise<void>;
+  onSubmit: (data: Partial<CustomerService> & { qrCodeFile?: File }) => Promise<void>;
   onCancel: () => void;
   isLoading?: boolean;
 }
 
 const CITIES = [
-  { value: '南京', label: '南京', color: 'text-yellow-600' },
+  { value: '江苏', label: '江苏', color: 'text-yellow-600' },
   { value: '苏州', label: '苏州', color: 'text-green-600' },
   { value: '杭州', label: '杭州', color: 'text-blue-600' },
-  { value: '武汉', label: '武汉', color: 'text-pink-600' },
   { value: '郑州', label: '郑州', color: 'text-orange-600' }
+];
+
+// 江苏省城市列表，用于支持城市选择
+const JIANGSU_CITIES = [
+  { value: 'nanjing', label: '南京' },
+  { value: 'suzhou', label: '苏州' },
+  { value: 'wuxi', label: '无锡' },
+  { value: 'changzhou', label: '常州' },
+  { value: 'xuzhou', label: '徐州' },
+  { value: 'nantong', label: '南通' },
+  { value: 'lianyungang', label: '连云港' },
+  { value: 'huaian', label: '淮安' },
+  { value: 'yancheng', label: '盐城' },
+  { value: 'yangzhou', label: '扬州' },
+  { value: 'zhenjiang', label: '镇江' },
+  { value: 'taizhou', label: '泰州' },
+  { value: 'suqian', label: '宿迁' }
 ];
 
 export function CustomerServiceForm({ 
@@ -28,13 +44,15 @@ export function CustomerServiceForm({
     city: customerService?.city || '',
     wechatId: customerService?.wechatId || '',
     workHours: customerService?.workHours || '9:00-23:00',
-    isActive: customerService?.isActive ?? true
+    isActive: customerService?.isActive ?? true,
+    supportCities: customerService?.supportCities || []
   });
   const [qrCodeFile, setQrCodeFile] = useState<File | null>(null);
   const [qrCodePreview, setQrCodePreview] = useState<string>(
     customerService?.qrCodePath || ''
   );
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [formLoading, setFormLoading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const validateForm = () => {
@@ -56,6 +74,11 @@ export function CustomerServiceForm({
 
     if (!customerService && !qrCodeFile) {
       newErrors.qrCode = '请上传二维码图片';
+    }
+
+    // 如果选择了江苏，但没有选择任何支持城市
+    if (formData.city === '江苏' && formData.supportCities.length === 0) {
+      newErrors.supportCities = '请选择至少一个支持的城市';
     }
 
     setErrors(newErrors);
@@ -96,40 +119,102 @@ export function CustomerServiceForm({
       return;
     }
 
+    setFormLoading(true);
+    
     try {
-      let submitData: any = { ...formData };
+      // 准备基本信息
+      const customerServiceData = {
+        city: formData.city,
+        wechatId: formData.wechatId,
+        workHours: formData.workHours,
+        isActive: formData.isActive,
+        supportCities: formData.supportCities
+      };
+      
+      // 对于新增客服，直接传递二维码的 File 对象给上级组件处理
+      if (!customerService && qrCodeFile) {
+        // 新增客服，将文件对象传递给父组件
+        await onSubmit({
+          ...customerServiceData,
+          qrCodeFile
+        });
+      } 
+      // 对于编辑客服，如果有新的二维码文件，则通过专门的API上传
+      else if (customerService?.id && qrCodeFile) {
+        // 先更新基本信息
+        await onSubmit(customerServiceData);
+        
+        // 然后上传二维码
+        const formDataUpload = new FormData();
+        formDataUpload.append('file', qrCodeFile);
+        formDataUpload.append('customerId', customerService.id);
 
-      // 如果有新的二维码文件，先上传
-      if (qrCodeFile) {
-        const uploadFormData = new FormData();
-        uploadFormData.append('file', qrCodeFile);
-        uploadFormData.append('type', 'customer-service');
-        uploadFormData.append('city', formData.city);
-
-        const uploadResponse = await fetch('/api/upload', {
+        const uploadResponse = await fetch('/api/admin/customer-service-upload', {
           method: 'POST',
+          body: formDataUpload,
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
-          },
-          body: uploadFormData
+          }
         });
 
         if (!uploadResponse.ok) {
-          throw new Error('图片上传失败');
+          const errorData = await uploadResponse.json();
+          throw new Error(errorData.error || '二维码上传失败');
         }
 
-        const uploadResult = await uploadResponse.json();
-        submitData.qrCodePath = uploadResult.url;
+        // 刷新页面以显示新上传的二维码
+        window.location.reload();
       }
-
-      await onSubmit(submitData);
+      // 如果没有新的二维码文件，只更新基本信息
+      else {
+        await onSubmit(customerServiceData);
+      }
+      
+      // 成功处理
+      setFormLoading(false);
+      
     } catch (error) {
       console.error('提交失败:', error);
       setErrors(prev => ({ 
         ...prev, 
-        submit: error instanceof Error ? error.message : '提交失败，请重试' 
+        submit: '提交失败，请重试'
       }));
+      setFormLoading(false);
     }
+  };
+
+  // 处理江苏省支持城市的变化
+  const handleSupportCityChange = (cityValue: string) => {
+    setFormData(prev => {
+      const currentCities = [...prev.supportCities];
+      const cityIndex = currentCities.indexOf(cityValue);
+      
+      if (cityIndex >= 0) {
+        // 如果已存在，则移除
+        currentCities.splice(cityIndex, 1);
+      } else {
+        // 如果不存在，则添加
+        currentCities.push(cityValue);
+      }
+      
+      return {
+        ...prev,
+        supportCities: currentCities
+      };
+    });
+  };
+
+  // 全选/取消全选江苏省城市
+  const handleSelectAllJiangsuCities = () => {
+    setFormData(prev => {
+      if (prev.supportCities.length === JIANGSU_CITIES.length) {
+        // 如果已全选，则取消全选
+        return { ...prev, supportCities: [] };
+      } else {
+        // 否则全选
+        return { ...prev, supportCities: JIANGSU_CITIES.map(city => city.value) };
+    }
+    });
   };
 
   return (
@@ -168,6 +253,38 @@ export function CustomerServiceForm({
               <p className="mt-1 text-sm text-red-600">{errors.city}</p>
             )}
           </div>
+
+          {/* 江苏省支持城市选择 */}
+          {formData.city === '江苏' && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                支持城市 <span className="text-red-500">*</span>
+                <button 
+                  type="button" 
+                  onClick={handleSelectAllJiangsuCities}
+                  className="ml-2 text-xs text-blue-600 hover:underline"
+                >
+                  {formData.supportCities.length === JIANGSU_CITIES.length ? '取消全选' : '全选'}
+                </button>
+              </label>
+              <div className="grid grid-cols-3 gap-2">
+                {JIANGSU_CITIES.map(city => (
+                  <label key={city.value} className="flex items-center space-x-2">
+                    <input 
+                      type="checkbox"
+                      checked={formData.supportCities.includes(city.value)}
+                      onChange={() => handleSupportCityChange(city.value)}
+                      className="rounded text-blue-500 focus:ring-blue-500"
+                    />
+                    <span className="text-sm">{city.label}</span>
+                  </label>
+                ))}
+              </div>
+              {errors.supportCities && (
+                <p className="mt-1 text-sm text-red-600">{errors.supportCities}</p>
+              )}
+            </div>
+          )}
 
           {/* 微信号 */}
           <div>

@@ -3,16 +3,7 @@
 import { useState, useEffect } from 'react';
 import { AdminLayout } from '@/components/layout/admin-layout';
 import { CustomerServiceForm } from '@/components/custom/customer-service-form';
-
-interface CustomerService {
-  id: string;
-  city: string;
-  wechatId: string;
-  qrCodePath: string;
-  workHours: string;
-  isActive: boolean;
-  updatedAt: string;
-}
+import { CustomerService } from '@/lib/data/types';
 
 export default function CustomerServiceManagement() {
   const [customerServices, setCustomerServices] = useState<CustomerService[]>([]);
@@ -103,9 +94,15 @@ export default function CustomerServiceManagement() {
     }
   };
 
-  const handleFormSubmit = async (data: Partial<CustomerService>) => {
+  const handleFormSubmit = async (data: Partial<CustomerService> & { qrCodeFile?: File }) => {
     setFormLoading(true);
     try {
+      // 检查是否有二维码文件，如果有，则从数据中移除，稍后单独上传
+      const qrCodeFile = data.qrCodeFile;
+      if (qrCodeFile) {
+        delete data.qrCodeFile;
+      }
+
       if (editingCustomerService) {
         // 更新客服
         const response = await fetch(`/api/admin/customer-service/${editingCustomerService.id}`, {
@@ -126,6 +123,9 @@ export default function CustomerServiceManagement() {
           );
           setShowForm(false);
           setEditingCustomerService(null);
+
+          // 添加完成后刷新页面以确保正确显示二维码
+          window.location.reload();
         } else {
           throw new Error('更新客服失败');
         }
@@ -142,8 +142,38 @@ export default function CustomerServiceManagement() {
 
         if (response.ok) {
           const result = await response.json();
+          
+          // 如果有二维码文件，上传它
+          if (qrCodeFile) {
+            const newCustomerId = result.data.id;
+            const formData = new FormData();
+            formData.append('file', qrCodeFile);
+            formData.append('customerId', newCustomerId);
+            
+            const uploadResponse = await fetch('/api/admin/customer-service-upload', {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
+              },
+              body: formData
+            });
+            
+            if (uploadResponse.ok) {
+              const uploadResult = await uploadResponse.json();
+              // 更新客服信息中的二维码路径
+              result.data.qrCodePath = uploadResult.data.qrCodePath;
+            } else {
+              console.error('二维码上传失败');
+              const errorData = await uploadResponse.json();
+              throw new Error(errorData.error || '二维码上传失败');
+            }
+          }
+          
           setCustomerServices(prev => [...prev, result.data]);
           setShowForm(false);
+
+          // 添加完成后刷新页面以确保正确显示二维码
+          window.location.reload();
         } else {
           throw new Error('添加客服失败');
         }
@@ -207,7 +237,7 @@ export default function CustomerServiceManagement() {
                     {/* 二维码 */}
                     <div className="flex-shrink-0">
                       <img 
-                        src={cs.qrCodePath} 
+                        src={cs.qrCodePath + `?t=${Date.now()}`} 
                         alt={`${cs.city}客服二维码`}
                         className="w-24 h-24 object-cover rounded-lg border"
                       />
@@ -229,6 +259,33 @@ export default function CustomerServiceManagement() {
                       <div className="space-y-1 text-sm text-gray-600">
                         <div>微信号: {cs.wechatId}</div>
                         <div>工作时间: {cs.workHours}</div>
+                        {cs.supportCities && cs.supportCities.length > 0 && (
+                          <div>
+                            支持城市: 
+                            <span className="ml-1">
+                              {cs.supportCities.map(cityCode => {
+                                const cityName = {
+                                  'nanjing': '南京',
+                                  'suzhou': '苏州',
+                                  'wuxi': '无锡',
+                                  'changzhou': '常州',
+                                  'xuzhou': '徐州',
+                                  'nantong': '南通',
+                                  'lianyungang': '连云港',
+                                  'huaian': '淮安',
+                                  'yancheng': '盐城',
+                                  'yangzhou': '扬州',
+                                  'zhenjiang': '镇江',
+                                  'taizhou': '泰州',
+                                  'suqian': '宿迁',
+                                  'hangzhou': '杭州',
+                                  'zhengzhou': '郑州'
+                                }[cityCode] || cityCode;
+                                return cityName;
+                              }).join(', ')}
+                            </span>
+                          </div>
+                        )}
                         <div>更新时间: {new Date(cs.updatedAt).toLocaleString()}</div>
                       </div>
                     </div>

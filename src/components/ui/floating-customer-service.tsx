@@ -7,10 +7,8 @@ import { CustomerService } from '@/lib/data/types'
 
 // 城市主题色配置
 const CITY_THEMES = {
-  '南京': { color: 'bg-yellow-500 hover:bg-yellow-600 text-white', textColor: 'text-yellow-600' },
-  '苏州': { color: 'bg-green-500 hover:bg-green-600 text-white', textColor: 'text-green-600' },
+  '江苏': { color: 'bg-yellow-500 hover:bg-yellow-600 text-white', textColor: 'text-yellow-600' },
   '杭州': { color: 'bg-blue-500 hover:bg-blue-600 text-white', textColor: 'text-blue-600' },
-  '武汉': { color: 'bg-pink-500 hover:bg-pink-600 text-white', textColor: 'text-pink-600' },
   '郑州': { color: 'bg-orange-500 hover:bg-orange-600 text-white', textColor: 'text-orange-600' }
 }
 
@@ -39,6 +37,19 @@ export function FloatingCustomerService() {
     }
   }
 
+  // 获取去重后的城市列表
+  const uniqueCities = Array.from(new Set(customerServices.map(service => service.city)))
+
+  // 根据选择的城市获取客服列表
+  const getCustomerServicesForCity = (city: string) => {
+    // 如果是江苏省内城市，返回江苏客服
+    if (['南京', '苏州', '无锡', '常州', '徐州', '南通', '连云港', '淮安', '盐城', '扬州', '镇江', '泰州', '宿迁'].includes(city)) {
+      return customerServices.filter(service => service.city === '江苏')
+    }
+    // 否则返回对应城市客服
+    return customerServices.filter(service => service.city === city)
+  }
+
   const copyWechatId = async (wechatId: string) => {
     try {
       await navigator.clipboard.writeText(wechatId)
@@ -65,9 +76,9 @@ export function FloatingCustomerService() {
     document.body.removeChild(link)
   }
 
-  const selectedService = selectedCity 
-    ? customerServices.find(service => service.city === selectedCity)
-    : null
+  const selectedServices = selectedCity 
+    ? getCustomerServicesForCity(selectedCity)
+    : []
 
   return (
     <>
@@ -102,13 +113,13 @@ export function FloatingCustomerService() {
               </div>
             ) : (
               <div className="flex flex-wrap gap-2">
-                {customerServices.map((service) => {
-                  const theme = CITY_THEMES[service.city as keyof typeof CITY_THEMES]
-                  const isSelected = selectedCity === service.city
+                {uniqueCities.map((city) => {
+                  const theme = CITY_THEMES[city as keyof typeof CITY_THEMES]
+                  const isSelected = selectedCity === city
                   return (
                     <button
-                      key={service.id}
-                      onClick={() => setSelectedCity(service.city)}
+                      key={city}
+                      onClick={() => setSelectedCity(city)}
                       className={`
                         flex-1 min-w-0 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200
                         ${isSelected 
@@ -117,7 +128,7 @@ export function FloatingCustomerService() {
                         }
                       `}
                     >
-                      {service.city}
+                      {city}
                     </button>
                   )
                 })}
@@ -127,49 +138,65 @@ export function FloatingCustomerService() {
 
           {/* 客服信息展示区域 */}
           <div className="min-h-[300px] max-h-[70vh] overflow-y-auto">
-            {selectedService ? (
+            {selectedServices.length > 0 ? (
               <div className="p-6">
                 {/* 客服标题 */}
                 <div className="text-center mb-6">
                   <h4 className="text-xl font-semibold text-gray-900 mb-1">
-                    {selectedService.city}客服
+                    {selectedCity}客服
                   </h4>
-                  <p className="text-sm text-gray-600">{selectedService.workHours}</p>
+                  <p className="text-sm text-gray-600">
+                    {selectedServices.length > 1 ? `共 ${selectedServices.length} 位客服人员` : selectedServices[0].workHours}
+                  </p>
                 </div>
 
-                {/* 二维码展示 - 3:4比例 */}
-                <div className="flex flex-col items-center mb-6">
-                  <div className="w-48 h-64 bg-gray-100 rounded-lg overflow-hidden shadow-md mb-3">
-                    <img
-                      src={selectedService.qrCodePath}
-                      alt={`${selectedService.city}客服二维码`}
-                      width={192}
-                      height={256}
-                      className="w-full h-full object-cover"
-                    />
+                {/* 多个客服列表 */}
+                {selectedServices.map((service, index) => (
+                  <div key={service.id} className={`mb-8 ${index > 0 ? 'pt-8 border-t border-gray-200' : ''}`}>
+                    {selectedServices.length > 1 && (
+                      <h5 className="text-center font-medium text-gray-800 mb-3">客服 {index + 1}</h5>
+                    )}
+                    
+                    {/* 二维码展示 - 3:4比例 */}
+                    <div className="flex flex-col items-center mb-6">
+                      <div className="w-48 h-64 bg-gray-100 rounded-lg overflow-hidden shadow-md mb-3">
+                        <img
+                          src={service.qrCodePath + `?t=${Date.now()}`}
+                          alt={`${service.city}客服二维码`}
+                          width={192}
+                          height={256}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      {/* 下载二维码按钮移到二维码下方 */}
+                      <button
+                        onClick={() => handleDownloadQR(service.qrCodePath, service.city)}
+                        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center gap-2 font-medium"
+                      >
+                        <Download className="w-4 h-4" />
+                        下载二维码
+                      </button>
+                    </div>
+                    
+                    {/* 微信号显示和复制按钮在同一行 */}
+                    <div className="mb-4 flex items-center justify-between bg-gray-50 p-3 rounded-lg">
+                      <div className="flex-1 text-sm text-gray-500">
+                        微信号：{service.wechatId}
+                      </div>
+                      <button
+                        onClick={() => copyWechatId(service.wechatId)}
+                        className="ml-3 px-3 py-1 bg-green-500 text-white text-sm rounded-lg hover:bg-green-600 transition-colors font-medium whitespace-nowrap"
+                      >
+                        复制微信号
+                      </button>
+                    </div>
+
+                    {/* 工作时间 */}
+                    <div className="text-center text-sm text-gray-500">
+                      工作时间：{service.workHours}
+                    </div>
                   </div>
-                  {/* 下载二维码按钮移到二维码下方 */}
-                  <button
-                    onClick={() => handleDownloadQR(selectedService.qrCodePath, selectedService.city)}
-                    className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center gap-2 font-medium"
-                  >
-                    <Download className="w-4 h-4" />
-                    下载二维码
-                  </button>
-                </div>
-                
-                {/* 微信号显示和复制按钮在同一行 */}
-                <div className="mb-4 flex items-center justify-between bg-gray-50 p-3 rounded-lg">
-                  <div className="flex-1 text-sm text-gray-500">
-                    微信号：{selectedService.wechatId}
-                  </div>
-                  <button
-                    onClick={() => copyWechatId(selectedService.wechatId)}
-                    className="ml-3 px-3 py-1 bg-green-500 text-white text-sm rounded-lg hover:bg-green-600 transition-colors font-medium whitespace-nowrap"
-                  >
-                    复制微信号
-                  </button>
-                </div>
+                ))}
               </div>
             ) : (
               <div className="p-6 text-center text-gray-500">

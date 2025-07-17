@@ -1,22 +1,52 @@
 {
   "customerService": [
     {
-      "id": "cs_nanjing",
-      "city": "南京",
+      "id": "cs_jiangsu_1",
+      "city": "江苏",
       "wechatId": "sunjiaqiang1997",
-      "qrCodePath": "/uploads/customer-service/南京客服.png",
+      "qrCodePath": "/uploads/customer-service/江苏_sunjiaqiang1997_1751527185120.png",
       "workHours": "12:00-24:00",
       "isActive": true,
-      "updatedAt": "2025-06-30T06:41:25.956Z"
+      "updatedAt": "2025-07-03T07:19:45.122Z",
+      "supportCities": [
+        "nanjing",
+        "suzhou",
+        "wuxi",
+        "changzhou",
+        "xuzhou",
+        "nantong",
+        "lianyungang",
+        "huaian",
+        "yancheng",
+        "yangzhou",
+        "zhenjiang",
+        "taizhou",
+        "suqian"
+      ]
     },
     {
-      "id": "cs_suzhou",
-      "city": "苏州",
+      "id": "cs_jiangsu_2",
+      "city": "江苏",
       "wechatId": "kangyangzy002",
-      "qrCodePath": "/uploads/customer-service/苏州客服.png",
+      "qrCodePath": "/uploads/customer-service/江苏_kangyangzy002_1751527199495.png",
       "workHours": "12:00-24:00",
       "isActive": true,
-      "updatedAt": "2025-06-28T05:44:03.703Z"
+      "updatedAt": "2025-07-03T07:19:59.498Z",
+      "supportCities": [
+        "nanjing",
+        "suzhou",
+        "wuxi",
+        "changzhou",
+        "xuzhou",
+        "nantong",
+        "lianyungang",
+        "huaian",
+        "yancheng",
+        "yangzhou",
+        "zhenjiang",
+        "taizhou",
+        "suqian"
+      ]
     },
     {
       "id": "cs_hangzhou",
@@ -25,16 +55,10 @@
       "qrCodePath": "/uploads/customer-service/杭州客服.jpg",
       "workHours": "12:00-24:00",
       "isActive": true,
-      "updatedAt": "2025-06-28T05:46:06.790Z"
-    },
-    {
-      "id": "cs_wuhan",
-      "city": "武汉",
-      "wechatId": "jiugehui0001",
-      "qrCodePath": "/uploads/customer-service/武汉客服.png",
-      "workHours": "12:00-24:00",
-      "isActive": true,
-      "updatedAt": "2025-06-28T05:44:36.703Z"
+      "updatedAt": "2025-06-28T05:46:06.790Z",
+      "supportCities": [
+        "hangzhou"
+      ]
     },
     {
       "id": "cs_zhengzhou",
@@ -43,7 +67,35 @@
       "qrCodePath": "/uploads/customer-service/郑州客服.jpg",
       "workHours": "12:00-24:00",
       "isActive": true,
-      "updatedAt": "2025-06-28T05:45:13.272Z"
+      "updatedAt": "2025-06-28T05:45:13.272Z",
+      "supportCities": [
+        "zhengzhou"
+      ]
+    },
+    {
+      "city": "江苏",
+      "wechatId": "QQ：1228480545",
+      "workHours": "12:00-24:00",
+      "isActive": true,
+      "supportCities": [
+        "nanjing",
+        "suzhou",
+        "wuxi",
+        "changzhou",
+        "xuzhou",
+        "nantong",
+        "lianyungang",
+        "huaian",
+        "yancheng",
+        "yangzhou",
+        "zhenjiang",
+        "taizhou",
+        "suqian"
+      ],
+      "id": "mcn1d91tot9z7djr8x",
+      "createdAt": "2025-07-03T07:00:18.065Z",
+      "updatedAt": "2025-07-03T07:19:28.650Z",
+      "qrCodePath": "/uploads/customer-service/江苏_QQ：1228480545_1751527168643.png"
     }
   ]
 }

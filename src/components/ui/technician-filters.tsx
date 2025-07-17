@@ -17,8 +17,18 @@ interface TechnicianFiltersProps {
 const CITIES: { key: CityType; name: string; color: string }[] = [
   { key: 'nanjing', name: '南京', color: getCityThemeColor('nanjing') },
   { key: 'suzhou', name: '苏州', color: getCityThemeColor('suzhou') },
+  { key: 'wuxi', name: '无锡', color: getCityThemeColor('wuxi') },
+  { key: 'changzhou', name: '常州', color: getCityThemeColor('changzhou') },
+  { key: 'xuzhou', name: '徐州', color: getCityThemeColor('xuzhou') },
+  { key: 'nantong', name: '南通', color: getCityThemeColor('nantong') },
+  { key: 'lianyungang', name: '连云港', color: getCityThemeColor('lianyungang') },
+  { key: 'huaian', name: '淮安', color: getCityThemeColor('huaian') },
+  { key: 'yancheng', name: '盐城', color: getCityThemeColor('yancheng') },
+  { key: 'yangzhou', name: '扬州', color: getCityThemeColor('yangzhou') },
+  { key: 'zhenjiang', name: '镇江', color: getCityThemeColor('zhenjiang') },
+  { key: 'taizhou', name: '泰州', color: getCityThemeColor('taizhou') },
+  { key: 'suqian', name: '宿迁', color: getCityThemeColor('suqian') },
   { key: 'hangzhou', name: '杭州', color: getCityThemeColor('hangzhou') },
-  { key: 'wuhan', name: '武汉', color: getCityThemeColor('wuhan') },
   { key: 'zhengzhou', name: '郑州', color: getCityThemeColor('zhengzhou') },
 ]
 

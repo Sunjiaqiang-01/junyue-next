@@ -71,16 +71,36 @@ type PeriodType = 'day' | 'week' | 'month';
 const CITY_NAME_MAP: Record<string, string> = {
   nanjing: '南京',
   suzhou: '苏州',
+  wuxi: '无锡',
+  changzhou: '常州',
+  xuzhou: '徐州',
+  nantong: '南通',
+  lianyungang: '连云港',
+  huaian: '淮安',
+  yancheng: '盐城',
+  yangzhou: '扬州',
+  zhenjiang: '镇江',
+  taizhou: '泰州',
+  suqian: '宿迁',
   hangzhou: '杭州',
-  wuhan: '武汉',
   zhengzhou: '郑州'
 }
 
 const CITY_COLORS = {
   nanjing: '#D4AF37', // 南京金
   suzhou: 'rgba(75, 192, 192, 0.6)', // 苏州绿
+  wuxi: 'rgba(59, 130, 246, 0.6)', // 无锡蓝
+  changzhou: 'rgba(249, 115, 22, 0.6)', // 常州橙
+  xuzhou: 'rgba(139, 92, 246, 0.6)', // 徐州紫
+  nantong: 'rgba(34, 197, 94, 0.6)', // 南通绿
+  lianyungang: 'rgba(6, 182, 212, 0.6)', // 连云港蓝
+  huaian: 'rgba(245, 158, 11, 0.6)', // 淮安橙
+  yancheng: 'rgba(74, 222, 128, 0.6)', // 盐城绿
+  yangzhou: 'rgba(234, 179, 8, 0.6)', // 扬州黄
+  zhenjiang: 'rgba(239, 68, 68, 0.6)', // 镇江红
+  taizhou: 'rgba(20, 184, 166, 0.6)', // 泰州青
+  suqian: 'rgba(168, 85, 247, 0.6)', // 宿迁紫
   hangzhou: 'rgba(54, 162, 235, 0.6)', // 杭州蓝
-  wuhan: 'rgba(255, 99, 132, 0.6)', // 武汉粉
   zhengzhou: 'rgba(255, 159, 64, 0.6)' // 郑州橙
 }
 

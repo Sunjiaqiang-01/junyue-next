@@ -49,6 +49,7 @@ export interface CustomerService {
   workHours: string;
   isActive: boolean;
   updatedAt: string;
+  supportCities: string[];
 }
 
 // 管理员类型
@@ -80,7 +81,7 @@ export interface AdminData {
 }
 
 // 城市类型
-export type CityType = 'nanjing' | 'suzhou' | 'hangzhou' | 'wuhan' | 'zhengzhou'
+export type CityType = 'nanjing' | 'suzhou' | 'wuxi' | 'changzhou' | 'xuzhou' | 'nantong' | 'lianyungang' | 'huaian' | 'yancheng' | 'yangzhou' | 'zhenjiang' | 'taizhou' | 'suqian' | 'hangzhou' | 'zhengzhou'
 
 // 媒体类型
 export type MediaType = 'image' | 'video'

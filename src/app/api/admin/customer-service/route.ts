@@ -64,7 +64,16 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 检查城市是否已存在客服
+    // 验证supportCities字段
+    if (body.city === '江苏' && (!body.supportCities || body.supportCities.length === 0)) {
+      return NextResponse.json(
+        { error: '江苏客服必须选择支持的城市' },
+        { status: 400 }
+      )
+    }
+
+    // 检查城市是否已存在客服（江苏允许多个客服）
+    if (body.city !== '江苏') {
     const existingCustomerService = await jsonStorage.findAll('customer-service.json', (cs: CustomerService) => {
       return cs.city === body.city
     })
@@ -74,13 +83,22 @@ export async function POST(request: NextRequest) {
         { error: '该城市已存在客服' },
         { status: 400 }
       )
+      }
+    }
+
+    // 如果是杭州或郑州，自动设置supportCities
+    if (body.city === '杭州' && (!body.supportCities || body.supportCities.length === 0)) {
+      body.supportCities = ['hangzhou'];
+    } else if (body.city === '郑州' && (!body.supportCities || body.supportCities.length === 0)) {
+      body.supportCities = ['zhengzhou'];
     }
 
     // 创建新客服
     const newCustomerService = await jsonStorage.create('customer-service.json', {
       ...body,
       workHours: body.workHours || '9:00-23:00',
-      isActive: body.isActive ?? true
+      isActive: body.isActive ?? true,
+      supportCities: body.supportCities || []
     })
 
     return NextResponse.json({

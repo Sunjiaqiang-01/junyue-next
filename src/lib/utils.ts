@@ -29,8 +29,18 @@ export function validateWechat(wechat: string): boolean {
 export const cityThemeColors = {
   nanjing: '#D4AF37',    // 金陵金
   suzhou: '#10B981',     // 园林绿
+  wuxi: '#3B82F6',       // 太湖蓝
+  changzhou: '#F97316',  // 龙城橙
+  xuzhou: '#8B5CF6',     // 徐州紫
+  nantong: '#22C55E',    // 通州绿
+  lianyungang: '#06B6D4', // 海港蓝
+  huaian: '#F59E0B',     // 淮安橙
+  yancheng: '#4ADE80',   // 盐城绿
+  yangzhou: '#EAB308',   // 扬州黄
+  zhenjiang: '#EF4444',  // 镇江红
+  taizhou: '#14B8A6',    // 泰州青
+  suqian: '#A855F7',     // 宿迁紫
   hangzhou: '#3B82F6',   // 西湖蓝
-  wuhan: '#EC4899',      // 樱花粉
   zhengzhou: '#F97316',  // 黄河金
 } as const
 
@@ -45,8 +55,18 @@ export function getCityThemeColor(city: CityType): string {
 export const cityDisplayNames = {
   nanjing: '南京',
   suzhou: '苏州',
+  wuxi: '无锡',
+  changzhou: '常州',
+  xuzhou: '徐州',
+  nantong: '南通',
+  lianyungang: '连云港',
+  huaian: '淮安',
+  yancheng: '盐城',
+  yangzhou: '扬州',
+  zhenjiang: '镇江',
+  taizhou: '泰州',
+  suqian: '宿迁',
   hangzhou: '杭州',
-  wuhan: '武汉',
   zhengzhou: '郑州',
 } as const
 

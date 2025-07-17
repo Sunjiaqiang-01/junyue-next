@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge'
 import { useDialog, DialogContainer } from '@/components/ui/dialog'
 import { Technician, TechnicianMedia } from '@/lib/data/types'
 import { cn } from '@/lib/utils'
+import { getAllCities } from '@/lib/city-theme'
 
 interface TechnicianFormProps {
   initialData?: Partial<Technician>
@@ -38,13 +39,8 @@ interface FormData {
   updatedAt?: string
 }
 
-const cities = [
-  { value: 'nanjing', label: '南京' },
-  { value: 'suzhou', label: '苏州' },
-  { value: 'hangzhou', label: '杭州' },
-  { value: 'wuhan', label: '武汉' },
-  { value: 'zhengzhou', label: '郑州' }
-]
+// 使用getAllCities函数获取城市配置
+const cities = getAllCities()
 
 const serviceOptions = [
   '基础舒缓SPA',
@@ -373,17 +369,17 @@ export function TechnicianForm({ initialData, onSubmit, onCancel, loading = fals
           <div className="flex flex-wrap gap-2">
             {cities.map((city) => (
               <button
-                key={city.value}
+                key={city.key}
                 type="button"
-                onClick={() => handleCityToggle(city.value)}
+                onClick={() => handleCityToggle(city.key)}
                 className={cn(
                   "px-3 py-2 rounded-full text-sm font-medium transition-colors",
-                  formData.cities.includes(city.value)
+                  formData.cities.includes(city.key)
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 )}
               >
-                {city.label}
+                {city.name}
               </button>
             ))}
           </div>

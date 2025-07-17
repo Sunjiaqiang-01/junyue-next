@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { TechnicianCard } from '@/components/ui/technician-card'
 import { TechnicianFilters } from '@/components/ui/technician-filters'
 import { LocationPermissionGuide } from '@/components/ui/location-permission-guide'
@@ -9,6 +9,52 @@ import { Card } from '@/components/ui/card'
 import { useLocation } from '@/hooks/useLocation'
 import { useDistance } from '@/hooks/useDistance'
 import { Technician, TechnicianFilters as FilterType } from '@/lib/data/types'
+
+// 懒加载技师卡片组件
+function LazyTechnicianCard({ 
+  technician, 
+  userLocation
+}: { 
+  technician: Technician, 
+  userLocation?: any
+}) {
+  const cardRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  
+  useEffect(() => {
+    if (!cardRef.current) return
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect() // 一旦可见，就不再观察
+        }
+      })
+    }, {
+      root: null, // 使用视口作为根
+      rootMargin: '200px 0px', // 在元素进入视口前200px开始加载
+      threshold: 0.1 // 当10%的元素可见时触发
+    })
+    
+    observer.observe(cardRef.current)
+    
+    return () => observer.disconnect()
+  }, [])
+  
+  return (
+    <div ref={cardRef}>
+      {isVisible ? (
+        <TechnicianCard
+          technician={technician}
+          userLocation={userLocation}
+        />
+      ) : (
+        <div className="h-[300px] w-full bg-gray-100 rounded-lg"></div>
+      )}
+    </div>
+  )
+}
 
 interface TechnicianListProps {
   technicians?: Technician[] // 可选，如果不传则自动获取
@@ -275,10 +321,10 @@ export function TechnicianList({ technicians: propTechnicians, className = '' }:
         </div>
       </div>
 
-      {/* 技师网格 */}
+      {/* 技师网格 - 使用懒加载 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredTechnicians.map((technician) => (
-          <TechnicianCard
+          <LazyTechnicianCard
             key={technician.id}
             technician={technician}
             userLocation={location}
